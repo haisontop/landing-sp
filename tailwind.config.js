@@ -12,8 +12,12 @@ module.exports = {
         current: "currentColor",
         "sp-pink": "#F2E3E1",
         "sp-blue": "#21364F",
+        "unnamed-color" : "#042134",
+        "unnamed-gray" : "#F0F2F6"
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar-hide')
+  ],
 };

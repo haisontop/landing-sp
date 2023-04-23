@@ -16,7 +16,10 @@
     "incremental": true,
     "paths": {
       "@/*": ["./*"]
-    }
+    },
+    "typeRoots": [
+      "./types/scrollbar-hide"
+    ]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
