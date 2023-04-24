@@ -1,4 +1,4 @@
-import { ApprasialForm, Button, Card, Header, Search } from "@/components";
+import { ApprasialForm, Button, Card, Header, Search, Footer } from "@/components";
 import { PropertyCard } from "@/components/Cards/PropertyCard";
 import builder from "@builder.io/react";
 import Head from "next/head";
@@ -138,7 +138,7 @@ export default function Home({ secondaryLinks }: { secondaryLinks: any }) {
           </div>
         </section>
         <section className="mt-[79px] bg-unnamed-color ">
-          <div className="container mx-auto px-4 py-[59px] grid grid-cols-7 gap-x-[62px]">
+          <div className="container mx-auto px-4 pt-[59px] pb-[101px] grid grid-cols-7 gap-x-[62px]">
             <div className="col-span-4 bg-gray-200 h-[550px] rounded-3xl relative overflow-hidden">
               <img
                 src="https://placehold.it/800x600"
@@ -167,6 +167,7 @@ export default function Home({ secondaryLinks }: { secondaryLinks: any }) {
             </div>
           </div>
         </section>
+        <Footer />
       </main>
     </>
   );

@@ -7,3 +7,4 @@ export * from "./Forms";
 export * from "./Modal";
 export * from "./Buttons";
 export * from "./Search";
+export * from "./Footer";

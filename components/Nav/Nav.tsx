@@ -25,7 +25,7 @@ export function Nav() {
   return (
     <div className="flex justify-center">
       <nav
-        className={`rounded-lg bg-sp-blue border border-blue-900 px-6 flex self-center justify-self-center fixed ${
+        className={`rounded-lg bg-sp-blue border border-blue-900 px-6 flex self-center justify-self-center fixed z-30 ${
           scrollPosition >= scrollPoint && "drop-shadow-lg"
         }`}
       >
