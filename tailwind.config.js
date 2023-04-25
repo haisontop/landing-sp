@@ -15,7 +15,11 @@ module.exports = {
         "unnamed-color" : "#042134",
         "unnamed-gray" : "#F0F2F6",
         "sp-gray" : "#D3D3D3",
-        "sp-black" : "#222222"
+        "sp-black" : "#222222",
+        "sp-solid-blue" : {
+          "700" : "#1C2F44",
+          "500" : "#3A5877"
+        }
       },
     },
   },
