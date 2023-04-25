@@ -30,7 +30,10 @@ export const Footer = () => {
               <li>(02) 4905 0110</li>
               <li>hello@spillaneproperty.com.au</li>
               <li>4/103 Tudor St, Hamilton NSW 2303</li>
-              <li></li>
+              <li className="flex gap-x-4 text-2xl">
+                <Link href={"/"}>Facebook</Link>{" "}
+                <Link href={"/"}>Instagram</Link>
+              </li>
             </ul>
           </div>
           <div className="col-span-2 text-[18px] text-[#F2E3E1]">

@@ -13,7 +13,8 @@ module.exports = {
         "sp-pink": "#F2E3E1",
         "sp-blue": "#21364F",
         "unnamed-color" : "#042134",
-        "unnamed-gray" : "#F0F2F6"
+        "unnamed-gray" : "#F0F2F6",
+        "sp-gray" : "#D3D3D3"
       },
     },
   },
