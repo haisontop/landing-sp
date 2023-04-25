@@ -8,3 +8,6 @@ export * from "./Modal";
 export * from "./Buttons";
 export * from "./Search";
 export * from "./Footer";
+export * from "./SingupProperty"
+export * from "./Search/SearchItem";
+export * from "./Search/SearchServices";

@@ -1,0 +1,1 @@
+export {SingupProperty} from "./SingupProperty"

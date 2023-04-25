@@ -1,4 +1,4 @@
-import { ApprasialForm, Button, Card, Header, Search, Footer } from "@/components";
+import { ApprasialForm, Button, Card, Header, Search, Footer, SingupProperty } from "@/components";
 import { PropertyCard } from "@/components/Cards/PropertyCard";
 import builder from "@builder.io/react";
 import Head from "next/head";
@@ -103,35 +103,7 @@ export default function Home({ secondaryLinks }: { secondaryLinks: any }) {
         <section className="overflow-x-auto">
           <div className="container mx-auto px-4">
             <div className="grid grid-flow-col auto-cols-[400px] gap-4 pt-32 scrollbar-hide">
-              <Card color="pink" className="p-10 flex flex-col gap-4">
-                <h3 className="text-4xl font-bold text-sp-blue">
-                  Be the first to see our new listings
-                </h3>
-                <p className="opacity-70 text-sp-blue">
-                  Sign up for property notifications and stay up-to-date on the
-                  latest properties available for sale.
-                </p>
-                <div className="flex flex-col gap-4">
-                  <h5>Send notifications to:</h5>
-                  <input
-                    type="text"
-                    placeholder="Your email address"
-                    className="rounded-md px-4 py-4 border border-gray-200"
-                  />
-                  <select
-                    name="suburb"
-                    id=""
-                    className="rounded-md px-4 py-4 border border-gray-200"
-                  >
-                    <option value="all">All Suburbs</option>
-                  </select>
-                  <Button
-                    label="Get listing Notifications"
-                    className="justify-center"
-                  />
-                </div>
-              </Card>
-
+              <SingupProperty />
               {properties.map((property) => (
                 <PropertyCard type="vertical" id={property} size="small" />
               ))}

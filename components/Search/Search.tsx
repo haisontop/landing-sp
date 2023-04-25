@@ -14,12 +14,17 @@ export const Search: React.FC<SearchProps> = ({
   category,
   filters = "",
 }) => {
-  const [search, setSearch] = useState<null | string>(null);
+  const [search, setSearch] = useState(false);
   return (
-    <div className={`flex transition-all duration-300 gap-8 items-stretch ${search ? 'max-w-4xl' : 'max-w-3xl'} border-sp-gray rounded-2xl p-8 mx-auto shadow-2xl`}>
+    <div
+      onFocus={() => setSearch(true)}
+      onBlur={()=> setSearch(false)}
+      className={`flex transition-all duration-300 gap-8 items-stretch ${
+        search ? "max-w-4xl" : "max-w-3xl"
+      } border-sp-gray rounded-2xl p-8 mx-auto shadow-2xl`}
+    >
       <input
         type="text"
-        onChange={(e) => setSearch(e.target.value)}
         name="address"
         placeholder="Search for address or suburb"
         className="grow border-r border-gray-200 text-lg w-full outline-none"
