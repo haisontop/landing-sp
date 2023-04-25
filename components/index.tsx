@@ -11,3 +11,4 @@ export * from "./Footer";
 export * from "./SingupProperty"
 export * from "./Search/SearchItem";
 export * from "./Search/SearchServices";
+export * from "./UniqSalesProcces";
