@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { SearchIcon, MenuIcon, SdotIcon } from "@/components";
 import useScrollPosition from "@/hooks/useScrollPosition";
+import Link from "next/link";
 
 export function Nav() {
   const [searchState, setSearchState] = useState(false);
@@ -29,13 +30,13 @@ export function Nav() {
           scrollPosition >= scrollPoint && "drop-shadow-lg"
         }`}
       >
-        <a
+        <Link
           href="/"
           className="text-white hidden lg:flex py-4 items-center transition-all overflow-hidden after:content-[''] after:mx-6 after:h-full after:border-r after:border-slate-600"
           style={{ width: scrollPosition >= scrollPoint ? 70 : 0 }}
         >
           <SdotIcon />
-        </a>
+        </Link>
 
         {items.map((navItem, index) => (
           <a

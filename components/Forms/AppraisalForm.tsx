@@ -11,7 +11,7 @@ export const ApprasialForm: React.FC<ApprasialFormProps> = ({}) => {
       <Card color="blue" className="p-10">
         <h4 className="text-2xl font-bold mb-4">Request An Apprasial</h4>
         <p className="opacity-70 mb-6 pr-24">
-          Don't miss out on your dream home - start your search today!
+          Don&apos;t miss out on your dream home - start your search today!
         </p>
         <div className="flex gap-2">
           <input

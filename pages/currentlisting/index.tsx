@@ -60,7 +60,7 @@ const index = () => {
                   />
                 </div>
                 {properties.map((property) => (
-                  <PropertyCard type="vertical" id={property} size="small" />
+                  <PropertyCard type="vertical" id={property} key={property} size="small" />
                 ))}
               </div>
             </section>

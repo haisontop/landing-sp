@@ -88,7 +88,7 @@ const index = () => {
               </div>
               <div className="grid grid-cols-4 gap-4 mt-6">
                 {properties.map((property) => (
-                  <PropertyCard type="vertical" id={property} size="small" />
+                  <PropertyCard type="vertical" id={property} key={property} size="small" />
                 ))}
               </div>
             </section>

@@ -40,7 +40,7 @@ export const Footer = () => {
             <h2 className=" font-bold">For Sale</h2>
             <ul className="flex flex-col gap-y-[16px] mt-[16px]">
               {ForSale.map((sl) => (
-                <li>
+                <li key={sl}>
                   <Link href={sl}>{sl}</Link>
                 </li>
               ))}
@@ -51,7 +51,7 @@ export const Footer = () => {
               <h2 className=" font-bold">For Lease</h2>
               <ul className="flex flex-col gap-y-[16px] mt-[16px]">
                 {ForLease.map((sl) => (
-                  <li>
+                  <li key={sl}>
                     <Link href={sl}>{sl}</Link>
                   </li>
                 ))}
@@ -61,7 +61,7 @@ export const Footer = () => {
               <h2 className=" font-bold">Resources</h2>
               <ul className="flex flex-col gap-y-[16px] mt-[16px]">
                 {Resourse.map((sl) => (
-                  <li>
+                  <li key={sl}>
                     <Link href={sl}>{sl}</Link>
                   </li>
                 ))}

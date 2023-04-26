@@ -8,7 +8,7 @@ export const SearchItem = () => {
   return (
     <section className="container mx-auto px-4 mt-12 grid md:grid-cols-4 gap-4">
       {properties.map((property) => (
-        <PropertyCard type="vertical" id={property} size="small" />
+        <PropertyCard type="vertical" id={property} key={property} size="small" />
       ))}
     </section>
   );
