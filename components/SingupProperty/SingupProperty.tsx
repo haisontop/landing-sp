@@ -5,10 +5,10 @@ import { Button } from "../Buttons";
 export const SingupProperty = () => {
   return (
     <Card color="pink" className="p-10 flex flex-col gap-4">
-      <h3 className="text-4xl font-bold text-sp-blue">
+      <h3 className="text-4xl font-bold text-unnamed-color">
         Be the first to see our new listings
       </h3>
-      <p className="opacity-70 text-sp-blue">
+      <p className="opacity-70 text-sp-black">
         Sign up for property notifications and stay up-to-date on the latest
         properties available for sale.
       </p>

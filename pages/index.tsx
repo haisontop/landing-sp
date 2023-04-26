@@ -1,4 +1,12 @@
-import { ApprasialForm, Button, Card, Header, Search, Footer, SingupProperty } from "@/components";
+import {
+  ApprasialForm,
+  Button,
+  Card,
+  Header,
+  Search,
+  Footer,
+  SingupProperty,
+} from "@/components";
 import { PropertyCard } from "@/components/Cards/PropertyCard";
 import builder from "@builder.io/react";
 import Head from "next/head";
@@ -75,10 +83,11 @@ export default function Home({ secondaryLinks }: { secondaryLinks: any }) {
             <Card className="col-span-2 flex flex-col">
               <div className="p-8 grow justify-center flex flex-col">
                 <h3 className="text-3xl font-bold text-sp-blue">
-                  Discover Newcastle's finest properties
+                  Discover Newcastle&apos;s finest properties
                 </h3>
                 <p className="opacity-70 mt-2">
-                  Don't miss out on your dream home - start your search today!
+                  Don&apos;t miss out on your dream home - start your search
+                  today!
                 </p>
               </div>
               <div className="p-8 border-t border-gray-200">
@@ -105,7 +114,12 @@ export default function Home({ secondaryLinks }: { secondaryLinks: any }) {
             <div className="grid grid-flow-col auto-cols-[400px] gap-4 pt-32 scrollbar-hide">
               <SingupProperty />
               {properties.map((property) => (
-                <PropertyCard type="vertical" id={property} size="small" />
+                <PropertyCard
+                  type="vertical"
+                  key={property}
+                  id={property}
+                  size="small"
+                />
               ))}
             </div>
           </div>
@@ -137,7 +151,11 @@ export default function Home({ secondaryLinks }: { secondaryLinks: any }) {
                 their real estate goals.
               </p>
               <div>
-                <Button label="More about us" type="pink" className="text-base font-medium mt-[56px]" />
+                <Button
+                  label="More about us"
+                  type="pink"
+                  className="text-base font-medium mt-[56px]"
+                />
               </div>
             </div>
           </div>
