@@ -13,3 +13,4 @@ export * from "./Search/SearchItem";
 export * from "./Search/SearchServices";
 export * from "./UniqSalesProcces";
 export * from "./Search/SearchBar";
+export * from "./OurMission"
