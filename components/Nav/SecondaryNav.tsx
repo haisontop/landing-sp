@@ -14,7 +14,7 @@ export function SecondaryNav({ links }: { links: any }) {
   ];
 
   return (
-    <div className="self-center justify-self-end">
+    <div className="self-center justify-self-end hidden lg:inline-block">
       {links.map((navItem: any) => (
         <a
           href={navItem.data.link}

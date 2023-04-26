@@ -5,8 +5,8 @@ import { Button } from "../Buttons";
 export const OurMission = () => {
   return (
     <section className="mt-[79px] bg-unnamed-color ">
-      <div className="container mx-auto px-4 pt-[59px] pb-[101px] grid grid-cols-7 gap-x-[62px]">
-        <div className="col-span-4 bg-gray-200 h-[550px] rounded-3xl relative overflow-hidden">
+      <div className="container mx-auto px-4 pt-[59px] pb-[101px] grid lg:grid-cols-7 gap-x-[62px]">
+        <div className="col-span-4 hidden lg:inline-block h-[550px] rounded-3xl relative overflow-hidden">
           <Image
             alt="hero image"
             src="/image/home/hero-xlarge.png"

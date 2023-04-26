@@ -20,7 +20,7 @@ export const Footer = () => {
   return (
     <footer className="bg-[#F2E3E1]">
       <div className="bg-[#020E17] rounded-b-[32px]">
-        <div className="pt-[74px] pb-[53px] container mx-auto px-4 grid grid-cols-11 gap-x-[60px]">
+        <div className="pt-[74px] pb-[53px] container mx-auto px-4 lg:grid lg:grid-cols-11 gap-x-[60px]">
           <div className=" col-span-3 flex flex-col text-white items-start">
             <div className="text-center">
               <h1 className=" text-6xl font-semibold">Spillane.</h1>

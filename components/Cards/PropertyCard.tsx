@@ -43,11 +43,11 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({
 
   return (
     <Card className={className}>
-      <div className={`flex ${type === "vertical" ? "flex-col" : ""}`}>
+      <div className={`flex ${type === "vertical" ? "flex-col" : "flex-col lg:flex-row"}`}>
         <div
           style={{ backgroundImage: "url(https://placehold.it/800x600)" }}
           className={`aspect-video bg-cover bg-center ${
-            type === "vertical" ? "w-full" : "w-9/12"
+            type === "vertical" ? "w-full" : "w-full lg:w-9/12"
           }`}
         >
           {type === "vertical" && (
@@ -63,13 +63,13 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({
         >
           <div className="px-10 py-6 flex flex-col gap-4">
             {type !== "vertical" && (
-              <div>
+              <div className="hidden lg:inline-block">
                 <Tag label="Auction - Sat 28th Feb" icon={faCalendarPlus} />
               </div>
             )}
             <h4
               className={`${
-                size === "regular" ? "text-4xl" : "text-2xl"
+                size === "regular" ? "text-2xl md:text-3xl lg:text-4xl" : "text-2xl"
               } font-bold`}
             >
               13/84 Beachly Ln, Newcastle
@@ -114,7 +114,7 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({
             })}
           </div>
           {type !== "vertical" && (
-            <div className="px-10 py-6 flex flex-col gap-6">
+            <div className="px-10 py-6 flex-col gap-6 hidden lg:flex">
               <h5 className="text-lg font-medium">
                 Price Guide: $1,200,000 - $1,400,000
               </h5>
