@@ -14,14 +14,9 @@ export const Search: React.FC<SearchProps> = ({
   category,
   filters = "",
 }) => {
-  const [search, setSearch] = useState(false);
   return (
     <div
-      onFocus={() => setSearch(true)}
-      onBlur={()=> setSearch(false)}
-      className={`flex transition-all duration-300 gap-8 items-stretch ${
-        search ? "max-w-4xl" : "max-w-3xl"
-      } border-sp-gray rounded-2xl p-8 mx-auto shadow-2xl`}
+      className={`flex transition-all duration-300 gap-8 items-stretch border-sp-gray rounded-2xl`}
     >
       <input
         type="text"
@@ -39,13 +34,11 @@ export const Search: React.FC<SearchProps> = ({
         <h4 className="pr-8">Filters</h4>
         <FontAwesomeIcon icon={faSliders} className="w-4" />
       </div>
-      {search && (
         <Button
           label="Search"
           icon={faSearch}
           className="w-full max-w-[180px] justify-center"
         />
-      )}
     </div>
   );
 };
