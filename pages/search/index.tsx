@@ -8,12 +8,10 @@ import {
   SearchServices,
   UniqSalesProcces,
 } from "@/components";
-import useSearch from "@/hooks/useSearch";
 import Link from "next/link";
 import React from "react";
 
 const index = () => {
-  const { isFocus } = useSearch();
 
   return (
     <div>
@@ -21,9 +19,8 @@ const index = () => {
       <div className=" bg-[#EEF0F4] pb-80">
         <div className="bg-sp-pink h-10" />
         <div
-          className={`-mt-10 ${
-            isFocus ? "md:max-w-4xl" : "md:max-w-3xl"
-          } md:mx-auto  transition-all duration-300 bg-white md:px-6 md:py-3 rounded-2xl mx-4`}
+          className={`-mt-10 
+            md:max-w-4xl bg-white md:px-6 md:py-3 rounded-2xl mx-4`}
         >
           <Search category={"Sold"} />
         </div>
