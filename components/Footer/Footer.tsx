@@ -24,8 +24,9 @@ export const Footer = () => {
         <div className="pt-[74px] pb-[53px] container mx-auto px-4 flex flex-col lg:grid lg:grid-cols-11 gap-x-[60px]">
           <div className=" col-span-3 flex flex-col text-white items-start mt-10 lg:mt-0">
             <div className="text-center">
-              <h1 className=" text-6xl font-semibold">Spillane.</h1>
-              <span className="text-base font-semibold">Property</span>
+              <div className="w-[220.55px] h-[71.39px] relative">
+                  <Image alt="logo image" fill className="object-contain" src={"/image/whitelogo.png"} />
+              </div>
             </div>
             <ul className="text-[#F2E3E1] mt-[59px] flex flex-col gap-y-[16px] text-[18px]">
               <li>(02) 4905 0110</li>

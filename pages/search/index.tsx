@@ -2,6 +2,7 @@ import {
   Button,
   Footer,
   Header,
+  Search,
   SearchBar,
   SearchItem,
   SearchServices,
@@ -11,7 +12,7 @@ import useSearch from "@/hooks/useSearch";
 import Link from "next/link";
 import React from "react";
 
-const Search = () => {
+const index = () => {
   const { isFocus } = useSearch();
 
   return (
@@ -21,10 +22,10 @@ const Search = () => {
         <div className="bg-sp-pink h-10" />
         <div
           className={`-mt-10 ${
-            isFocus ? "max-w-4xl" : "max-w-3xl"
-          } mx-auto  transition-all duration-300 `}
+            isFocus ? "md:max-w-4xl" : "md:max-w-3xl"
+          } md:mx-auto  transition-all duration-300 bg-white md:px-6 md:py-3 rounded-2xl mx-4`}
         >
-          <SearchBar />
+          <Search category={"Sold"} />
         </div>
         <h2 className="text-center mt-12 text-base text-sp-black">
           Showing{" "}
@@ -44,4 +45,4 @@ const Search = () => {
   );
 };
 
-export default Search;
+export default index;

@@ -3,8 +3,8 @@ import React from "react";
 
 const StepTwo = () => {
   return (
-    <div className="grid grid-cols-2 gap-x-4 h-[674px]">
-         <div className="relative rounded-3xl overflow-hidden">
+    <div className="lg:grid lg:grid-cols-2 gap-x-4 lg:h-[674px]">
+         <div className="relative rounded-3xl overflow-hidden hidden lg:inline-block">
         <Image
           alt="house image"
           src="/image/search/pixasquare-4ojhpgKpS68-unsplash.png"
@@ -17,13 +17,13 @@ const StepTwo = () => {
       </div>
       <div className="rounded-3xl bg-sp-pink">
         <div className="py-8 border-b border-sp-solid-gray-600">
-          <h2 className="px-16 text-base font-medium">Step 2 - Generate interest</h2>
+          <h2 className="px-8 lg:px-16 text-base font-medium">Step 2 - Generate interest</h2>
         </div>
-        <div className="p-16 flex flex-col h-5/6 justify-end">
-          <h1 className="text-3xl font-bold w-6/12">
+        <div className="px-8 py-8 lg:px-16 flex flex-col h-5/6 justify-end">
+          <h1 className="text-3xl font-bold lg:w-6/12">
             Title of step one will go here.
           </h1>
-          <p className="text-sp-black/70 text-base my-10 w-9/12">
+          <p className="text-sp-black/70 text-base my-10 lg:w-9/12">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut

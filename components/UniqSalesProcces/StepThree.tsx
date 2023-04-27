@@ -3,16 +3,16 @@ import React from "react";
 
 const StepThree = () => {
   return (
-    <div className="grid grid-cols-2 gap-x-4 h-[674px]">
+    <div className="lg:grid grid-cols-2 gap-x-4 lg:h-[674px]">
       <div className="rounded-3xl bg-sp-blue text-white">
         <div className="py-8 border-b border-sp-solid-blue-500">
-          <h2 className="px-16 text-base font-medium">Step 3 - Sell</h2>
+          <h2 className="px-8 lg:px-16 text-base font-medium">Step 3 - Sell</h2>
         </div>
-        <div className="p-16 flex flex-col h-5/6 justify-end">
-          <h1 className="text-3xl font-bold w-6/12">
+        <div className="p-8 lg:p-16 flex flex-col h-5/6 justify-end">
+          <h1 className="text-3xl font-bold lg:w-6/12">
             Title of step one will go here.
           </h1>
-          <p className="text-white/70 text-base my-10 w-9/12">
+          <p className="text-white/70 text-base my-10 lg:w-9/12">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -27,7 +27,7 @@ const StepThree = () => {
           </div>
         </div>
       </div>
-      <div className="relative rounded-3xl overflow-hidden">
+      <div className="relative rounded-3xl overflow-hidden hidden lg:inline-block">
         <Image
           alt="house image"
           src="/image/search/IDEA.00_03_10_07.Still003.png"

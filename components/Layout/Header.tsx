@@ -11,7 +11,7 @@ export function Header({ secondaryLinks }: { secondaryLinks: any[] }) {
           </Link>
           <Link href="/" className="lg:hidden">
             <div className=" relative w-[163.34px] h-[52.87px] mx-auto">
-            <Image alt="logo" src={"/image/FullLogo-light.png"} className="object-contain" fill  />
+            <Image alt="logo" src={"/image/logo.png"} className="object-contain" fill  />
             </div>
           </Link>
           <Nav />

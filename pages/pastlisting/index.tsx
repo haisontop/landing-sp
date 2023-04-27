@@ -1,5 +1,5 @@
 import {
-    Button,
+  Button,
   Footer,
   Header,
   OurMission,
@@ -17,10 +17,10 @@ const index = () => {
   return (
     <div>
       <Header secondaryLinks={[]} />
-      <div className="bg-[#EEF0F4] pb-32">
+      <div className="bg-[#EEF0F4] pb-5  lg:pb-32">
         <div className="bg-sp-pink h-24" />
         <div className="container px-4 mx-auto">
-          <div className="flex justify-between mx-4 -mt-16 pt-6 border-t border-[#E6BFBF]">
+          <div className="flex justify-center lg:justify-between mx-4 -mt-20 lg:-mt-16 pt-6 border-t border-[#E6BFBF]">
             <div>
               <div className="flex gap-x-3 items-center">
                 <div>
@@ -36,24 +36,24 @@ const index = () => {
                 </h1>
               </div>
             </div>
-            <div className=" max-w-4xl">
+            <div className="max-w-4xl hidden lg:inline-block">
               <SearchBar />
             </div>
           </div>
-          <div className="flex justify-between items-center mt-4 px-4">
-            <h1 className="text-4xl font-bold text-sp-solid-blue-800">
+          <div className="flex justify-center lg:justify-between items-center mt-14 lg:mt-4 px-4">
+            <h1 className="text-4xl font-bold text-sp-solid-blue-800 hidden lg:inline-block">
               Auctions & Opens this Weekend
             </h1>
             <h2 className="text-center text-base text-sp-black">
               Showing{" "}
               <Link href="" className="underline">
-                Recently Sold First
+                Upcoming Auctions First
               </Link>
             </h2>
           </div>
           <div className="container px-4 mx-auto">
             <section className="mt-10">
-              <div className="grid grid-cols-5 gap-4">
+              <div className="flex flex-col lg:grid grid-cols-5 gap-4">
                 <div className="col-span-3">
                   <PropertyCard
                     id={123456}
@@ -68,32 +68,48 @@ const index = () => {
                     never felt like I was pressured.”{" "}
                   </p>
                   <p className="text-xl font-medium mt-4 mx-10">Kim - Seller</p>
-                  <div className="grid grid-cols-2 border border-sp-solid-blue-500 mt-8">
-                    <div className="border-r border-x-sp-solid-blue-500">
-                      <h1 className="text-3xl font-bold p-10 text-center">
+                  <div className="lg:grid grid-cols-2 border border-sp-solid-blue-500 mt-8 text-sp-pink lg:text-white ">
+                    <div className="border-r border-b lg:border-b-0 border-x-sp-solid-blue-500">
+                      <h1 className="text-2xl lg:text-3xl font-bold py-5 lg:p-10 text-center">
                         Sold for $1,200,000.
                       </h1>
                     </div>
                     <div>
-                      <h1 className="text-3xl font-bold p-10 text-center">
-                        Sold in <br /> 20 Days.
+                      <h1 className="text-2xl lg:text-3xl font-bold py-5 lg:p-10 text-center">
+                        Sold in 20 Days.
                       </h1>
                     </div>
                   </div>
-                  <div className="flex justify-between p-10 items-center">
-                    <Button label="Read full Case Study" type="pink" className="text-black font-medium" />
-                    <h1 className="text-white font-bold text-5xl">S.</h1>
+                  <div className="flex justify-center lg:justify-between p-10 items-center">
+                    <Button
+                      label="Read full Case Study"
+                      type="pink"
+                      className="text-black font-medium"
+                    />
+                    <h1 className="text-white font-bold text-5xl hidden lg:inline-block">
+                      S.
+                    </h1>
                   </div>
                 </div>
               </div>
-              <div className="grid grid-cols-4 gap-4 mt-6">
+              <div className="grid lg:grid-cols-4 gap-4 mt-6">
                 {properties.map((property) => (
-                  <PropertyCard type="vertical" id={property} key={property} size="small" />
+                  <PropertyCard
+                    type="vertical"
+                    id={property}
+                    key={property}
+                    size="small"
+                  />
                 ))}
               </div>
             </section>
           </div>
         </div>
+      </div>
+      <div className="w-full flex justify-center">
+        <button className=" border-2 border-sp-solid-blue-800 py-4 px-10 mt-14 inline-block lg:hidden rounded-xl font-semibold text-xl">
+          View More
+        </button>
       </div>
       <div className="container mx-auto px-4">
         <UniqSalesProcces />
