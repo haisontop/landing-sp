@@ -14,9 +14,17 @@ export const OurMission = () => {
             fill
           />
         </div>
-        <div className="col-span-3 flex flex-col justify-center text-white">
+        <div className="col-span-3 flex flex-col justify-center text-sp-solid-pink-400">
           <h4 className=" text-sm">Our Mission</h4>
-          <div className="w-full bg-white h-[1px] mt-[26px]" />
+          <div className="w-full bg-sp-solid-pink-400 h-[1px] mt-[26px]" />
+          <div className="w-full h-[230px] relative rounded-2xl mt-8 md:hidden overflow-hidden">
+            <Image
+              alt="hero image"
+              src="/image/home/hero-xlarge.png"
+              className="object-cover w-full h-full"
+              fill
+            />
+          </div>
           <h1 className="text-4xl font-semibold mt-[40px]">
             The Spillane Property Mission
           </h1>

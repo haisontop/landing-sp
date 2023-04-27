@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { ApprasialForm } from "../Forms";
+import Image from "next/image";
 
 export const Footer = () => {
   const ForSale = [
@@ -18,10 +19,10 @@ export const Footer = () => {
   ];
   const Resourse = ["Seller Resources", "Landlord Resources"];
   return (
-    <footer className="bg-[#F2E3E1]">
+    <footer className="bg-[#F2E3E1] overflow-hidden">
       <div className="bg-[#020E17] rounded-b-[32px]">
-        <div className="pt-[74px] pb-[53px] container mx-auto px-4 lg:grid lg:grid-cols-11 gap-x-[60px]">
-          <div className=" col-span-3 flex flex-col text-white items-start">
+        <div className="pt-[74px] pb-[53px] container mx-auto px-4 flex flex-col lg:grid lg:grid-cols-11 gap-x-[60px]">
+          <div className=" col-span-3 flex flex-col text-white items-start mt-10 lg:mt-0">
             <div className="text-center">
               <h1 className=" text-6xl font-semibold">Spillane.</h1>
               <span className="text-base font-semibold">Property</span>
@@ -36,7 +37,7 @@ export const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="col-span-2 text-[18px] text-[#F2E3E1]">
+          <div className="col-span-2 text-[18px] text-sp-solid-pink-400 mt-10 lg:mt-0">
             <h2 className=" font-bold">For Sale</h2>
             <ul className="flex flex-col gap-y-[16px] mt-[16px]">
               {ForSale.map((sl) => (
@@ -46,7 +47,7 @@ export const Footer = () => {
               ))}
             </ul>
           </div>
-          <div className="col-span-2  text-[18px] text-[#F2E3E1]">
+          <div className="col-span-2  text-[18px] text-[#F2E3E1] mt-10 lg:mt-0">
             <div>
               <h2 className=" font-bold">For Lease</h2>
               <ul className="flex flex-col gap-y-[16px] mt-[16px]">
@@ -68,13 +69,13 @@ export const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="col-span-4">
+          <div className="col-span-4 order-first md:order-last">
             <ApprasialForm />
           </div>
         </div>
       </div>
-      <div className="py-[32px] container mx-auto px-5 text-[13px]">
-        <ul className="flex gap-x-3">
+      <div className="py-[32px] container mx-auto px-5 text-[13px] relative grid grid-cols-2">
+        <ul className="flex flex-col md:flex-row gap-x-3">
           <li className=" after:content-['|'] after:ml-1">
             <Link href="rights">Spillane Property © 2022</Link>
           </li>
@@ -88,6 +89,9 @@ export const Footer = () => {
             <Link href="rights">Terms and Conditions</Link>
           </li>
         </ul>
+          <div className="absolute -bottom-7 md:-bottom-5 right-0 w-[186px] h-[222px]">
+          <Image alt="dog image" src="/image/footer/Group 337.png" className="w-full h-full" width={270} height={290} />
+          </div>
       </div>
     </footer>
   );

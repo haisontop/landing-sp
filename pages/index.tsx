@@ -45,74 +45,80 @@ export default function Home({ secondaryLinks }: { secondaryLinks: any }) {
       </Head>
       <main>
         <Header secondaryLinks={secondaryLinks} />
-        <section className="container mx-auto px-4">
-          <div className="lg:grid lg:grid-cols-3 gap-4">
-            <div className=" col-span-2 flex flex-col gap-4">
-              <PropertyCard
-                id={123456}
-                type="feature"
-                className="col-span-2 row-span-2"
-              />
-              <Card className="col-span-2 flex flex-col">
-                <div className="p-8 grow justify-center flex flex-col">
-                  <h3 className="text-2xl md:text-3xl font-bold text-sp-blue">
-                    Discover Newcastle&apos;s finest properties
-                  </h3>
-                  <p className="opacity-70 mt-2 hidden lg:inline-block">
-                    Don&apos;t miss out on your dream home - start your search
-                    today!
-                  </p>
-                </div>
-                <div className="p-8 border-t border-gray-200">
-                  <Search category="Sale" />
-                </div>
-              </Card>
-            </div>
-            <div className="col-span-1 flex flex-col gap-4">
-              <ApprasialForm />
-              <div className="grid md:grid-cols-2 gap-4">
-                <Card
-                  color="pink"
-                  className="py-8 px-6 text-center text-sp-blue flex flex-col justify-center"
-                >
-                  <h4 className="font-bold text-2xl mb-3">
-                    93% Auction Clearance
-                  </h4>
-                  <p className="opacity-90 text-sm">
-                    This is a short description about the days on market
-                  </p>
-                </Card>
-
-                <Card
-                  color="pink"
-                  className="py-8 px-6 text-center text-sp-blue flex flex-col justify-center"
-                >
-                  <h4 className="font-bold text-2xl mb-3">
-                    100% List <br /> To Sell
-                  </h4>
-                  <p className="opacity-90 text-sm">
-                    This is a short description about the days on market
-                  </p>
+        <div className="relative">
+          <div className=" h-48 md:h-2/6 bg-sp-pink w-full absolute top-0" />
+          <section className="container mx-auto px-4 relative z-20">
+            <div className="lg:grid lg:grid-cols-3 gap-4">
+              <div className=" col-span-2 flex flex-col gap-4">
+                <PropertyCard
+                  id={123456}
+                  type="feature"
+                  className="col-span-2 row-span-2"
+                />
+                <Card className="col-span-2 flex flex-col">
+                  <div className="p-8 grow justify-center flex flex-col">
+                    <h3 className="text-xl md:text-3xl font-bold text-sp-blue">
+                      Discover Newcastle&apos;s finest properties
+                    </h3>
+                    <p className="opacity-70 mt-2 hidden lg:inline-block">
+                      Don&apos;t miss out on your dream home - start your search
+                      today!
+                    </p>
+                  </div>
+                  <div className="md:p-8 border-t border-gray-200">
+                    <Search category="Sale" />
+                  </div>
                 </Card>
               </div>
-              <Card
-                color="pink"
-                className="py-8 px-8 text-center text-sp-blue shrink"
-              >
-                <img src="daysOnMarket.png" alt="" />
-                <h4 className="font-bold text-3xl mb-3">20 Days on Market</h4>
-                <p className="opacity-90">
-                  This is a short description about the days on market
-                  statistic, why is this good?
-                </p>
-              </Card>
-            </div>
-          </div>
-        </section>
+              <div className="col-span-1 flex flex-col-reverse md:flex-col gap-4 mt-4 lg:mt-0">
+                <ApprasialForm />
+                <div className="flex md:w-full overflow-scroll flex-col-reverse md:flex-col  md:overflow-hidden rounded-xl gap-y-4">
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <Card
+                      color="pink"
+                      className="py-8 px-6 text-center text-sp-blue flex flex-col justify-center"
+                    >
+                      <h4 className="font-bold text-2xl mb-3">
+                        93% Auction Clearance
+                      </h4>
+                      <p className="opacity-90 text-sm">
+                        This is a short description about the days on market
+                      </p>
+                    </Card>
 
+                    <Card
+                      color="pink"
+                      className="py-8 px-6 text-center text-sp-blue flex flex-col justify-center"
+                    >
+                      <h4 className="font-bold text-2xl mb-3">
+                        100% List <br /> To Sell
+                      </h4>
+                      <p className="opacity-90 text-sm">
+                        This is a short description about the days on market
+                      </p>
+                    </Card>
+                  </div>
+                  <Card
+                    color="pink"
+                    className="py-8 px-8 text-center text-sp-blue shrink"
+                  >
+                    <img src="daysOnMarket.png" alt="" />
+                    <h4 className="font-bold text-3xl mb-3">
+                      20 Days on Market
+                    </h4>
+                    <p className="opacity-90">
+                      This is a short description about the days on market
+                      statistic, why is this good?
+                    </p>
+                  </Card>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
         <section className="overflow-x-auto">
           <div className="container mx-auto px-4">
-            <div className="grid grid-flow-col auto-cols-[400px] gap-4 pt-32 scrollbar-hide">
+            <div className="grid grid-flow-col auto-cols-[350px] md:auto-cols-[400px] gap-4 pt-10 md:pt-32 scrollbar-hide">
               <SingupProperty />
               {properties.map((property) => (
                 <PropertyCard

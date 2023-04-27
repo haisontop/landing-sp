@@ -4,7 +4,7 @@ import { Button } from "../Buttons";
 
 export const SingupProperty = () => {
   return (
-    <Card color="pink" className="p-10 flex flex-col gap-4">
+    <Card color="pink" className="p-7 md:p-10 flex flex-col gap-4">
       <h3 className="text-4xl font-bold text-unnamed-color">
         Be the first to see our new listings
       </h3>

@@ -26,6 +26,9 @@ module.exports = {
           700: "#EEF0F4",
           600: "#D3D3D3",
         },
+        "sp-solid-pink" : {
+          400 : "#EFE3E1"
+        }
       },
     },
     container: {

@@ -50,11 +50,9 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({
             type === "vertical" ? "w-full" : "w-full lg:w-9/12"
           }`}
         >
-          {type === "vertical" && (
-            <div className="pl-10 pt-8">
+            <div className={`pl-10 pt-8 ${type === "vertical" ? "hidden" : "inline-block lg:hidden"} `}>
               <Tag label="Auction - Sat 28th Feb" icon={faCalendarPlus} />
             </div>
-          )}
         </div>
         <div
           className={`flex flex-col text-sp-blue grow ${
