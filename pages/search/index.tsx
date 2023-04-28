@@ -1,9 +1,7 @@
 import {
-  Button,
   Footer,
   Header,
   Search,
-  SearchBar,
   SearchItem,
   SearchServices,
   UniqSalesProcces,
@@ -20,7 +18,7 @@ const index = () => {
         <div className="bg-sp-pink h-10" />
         <div
           className={`-mt-10 
-            md:max-w-4xl bg-white md:px-6 md:py-3 rounded-2xl mx-4`}
+            md:max-w-4xl bg-white md:px-6 md:py-3 rounded-2xl mx-4 md:mx-auto`}
         >
           <Search category={"Sold"} />
         </div>

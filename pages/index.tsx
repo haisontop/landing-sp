@@ -1,17 +1,16 @@
 import {
   ApprasialForm,
-  Button,
   Card,
   Header,
   Search,
   Footer,
   SingupProperty,
   OurMission,
+  PropertyList,
 } from "@/components";
 import { PropertyCard } from "@/components/Cards/PropertyCard";
 import builder from "@builder.io/react";
 import Head from "next/head";
-import Image from "next/image";
 
 export async function getStaticProps() {
   builder.init("bc22dc3b592c4fb7860d855ad1b2c528");
@@ -30,10 +29,6 @@ export async function getStaticProps() {
 }
 
 export default function Home({ secondaryLinks }: { secondaryLinks: any }) {
-  const properties = [
-    1234567, 1234567, 1234567, 1234567, 1234567, 1234567, 1234567, 1234567,
-    1234567, 1234567, 1234567, 1234567, 1234567, 1234567, 1234567,
-  ];
 
   return (
     <>
@@ -116,21 +111,7 @@ export default function Home({ secondaryLinks }: { secondaryLinks: any }) {
             </div>
           </section>
         </div>
-        <section className="overflow-x-auto">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-flow-col auto-cols-[350px] md:auto-cols-[400px] gap-4 pt-10 md:pt-32 scrollbar-hide">
-              <SingupProperty />
-              {properties.map((property) => (
-                <PropertyCard
-                  type="vertical"
-                  key={property}
-                  id={property}
-                  size="small"
-                />
-              ))}
-            </div>
-          </div>
-        </section>
+        <PropertyList />
         <OurMission />
         <Footer />
       </main>

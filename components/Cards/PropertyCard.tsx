@@ -97,7 +97,7 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({
                 <div
                   className="
                   py-4 pr-4 pl-4 border-r border-gray-200 font-bold
-                  flex
+                  flex items-center
                   first:pl-0 last:pr-0 last:border-0"
                   key={feature.type}
                 >

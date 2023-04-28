@@ -27,7 +27,8 @@ module.exports = {
           600: "#D3D3D3",
         },
         "sp-solid-pink" : {
-          400 : "#EFE3E1"
+          400 : "#EFE3E1",
+          600 : "#E6BFBF"
         }
       },
     },
