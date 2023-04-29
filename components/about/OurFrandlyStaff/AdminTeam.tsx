@@ -29,8 +29,8 @@ const AdminTeam = () => {
     <div className="mt-20 px-14 border-t">
       <h1 className="text-base font-medium mt-10">Our Admin Team</h1>
       <div className="mt-4 grid grid-cols-3 gap-4">
-        {items.map((it: any) => (
-          <AgentCard name={it.name} img={it.img} profession={it.profession} />
+        {items.map((it: any, index) => (
+          <AgentCard key={index} name={it.name} img={it.img} profession={it.profession} />
         ))}
       </div>
     </div>

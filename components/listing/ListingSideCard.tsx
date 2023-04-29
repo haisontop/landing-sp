@@ -140,7 +140,7 @@ const ListingSideCard = () => {
       </div>
       <div className="p-10 flex flex-col gap-y-4">
         {
-          agent.map((ag : any) => <AgentCard img={ag.img} name={ag.name} profession={ag.profession} />)
+          agent.map((ag : any, index) => <AgentCard key={index} img={ag.img} name={ag.name} profession={ag.profession} />)
         }
       </div>
     </div>
