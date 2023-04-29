@@ -31,7 +31,7 @@ export const RequestAgentCard = ({ types }: props) => {
           No.1 Agent for Newcastle
         </div>
       </div>
-      <div className="p-16">
+      <div className="p-5 lg:p-16">
         <h1 className="font-bold text-4xl text-[#020E17]">Donna Spillane</h1>
         <p className="mt-4 text-[#020E17] text-base">
           Principal and <br /> Licensed Real Estate Agent
