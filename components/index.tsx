@@ -16,3 +16,5 @@ export * from "./Search/SearchBar";
 export * from "./OurMission"
 export * from "./map"
 export * from "./PropertyList"
+export * from "./about/AboutBanner"
+export * from "./about/OurFrandlyStaff"

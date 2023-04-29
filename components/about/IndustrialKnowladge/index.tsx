@@ -1,0 +1,1 @@
+export {IndustrialKhowladge} from "./IndustrialKhowladge"

@@ -25,6 +25,7 @@ module.exports = {
           500: "#F0F2F6",
           700: "#EEF0F4",
           600: "#D3D3D3",
+          900 : "#222222"
         },
         "sp-solid-pink" : {
           400 : "#EFE3E1",
