@@ -13,7 +13,7 @@ export const OurFrandlyStaff = () => {
         <div className='mx-4 lg:mx-14 mt-10'>
             <RequestAgentCard types='vertical' />
         </div>
-        <DonnasTeam />
+        <DonnasTeam types='vertical' />
         <RentalTeam />
         <AdminTeam />
     </section>

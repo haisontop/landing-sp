@@ -1,7 +1,12 @@
 import { AgentCard } from '@/components/Cards'
 import React from 'react'
 
-const DonnasTeam = () => {
+interface props {
+  types? : "vertical"
+}
+
+
+const DonnasTeam = ({types} : props) => {
     const items = [
         {
           name : "Donna Spillane",
@@ -20,9 +25,9 @@ const DonnasTeam = () => {
           },
       ]
   return (
-    <div className='mt-10 mx-4 lg:mx-14'>
+    <div className={`mt-10 mx-4 ${types === 'vertical'&& 'lg:mx-14'}`}>
         <h1 className='text-base font-medium'>Donna’s Team</h1>
-        <div className='mt-4 grid lg:grid-cols-3 gap-4'>
+        <div className={`mt-4 grid ${types === 'vertical' && 'lg:grid-cols-3'} gap-4`}>
             {
                 items.map((it: any, index) => <AgentCard key={index} name={it.name} img={it.img} profession={it.profession} />)
             }

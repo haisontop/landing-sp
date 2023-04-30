@@ -12,7 +12,7 @@ interface props {
 
 export const AgentCard = ({img, name, profession } : props) => {
   return (
-    <div className=" grid grid-cols-12 border-2 rounded-2xl overflow-hidden shadow-xl">
+    <div className=" grid grid-cols-12 border-2 rounded-2xl overflow-hidden shadow-xl bg-white">
       <div className="col-span-5 relative overflow-hidden border-r-2">
           <Image alt={name} src={img} fill className="object-cover" />
       </div>
