@@ -20,3 +20,4 @@ export * from "./about/AboutBanner";
 export * from "./about/OurFrandlyStaff";
 export * from "./about/IndustrialKnowladge";
 export * from "./StaffProfile"
+export * from "./Resources"
