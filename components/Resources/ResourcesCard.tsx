@@ -19,9 +19,9 @@ export const ResourcesCard = ({title, subtitle, resources, id}: resourcesTypes) 
         <div className='grid lg:grid-cols-2 gap-x-4 gap-y-1'>
             {
                 resources.map((rs : {id : number}) => (
-                    <div key={rs.id} className='px-5 py-3 cursor-pointer flex items-center gap-x-5 bg-[#FAFAFA] border-b border-[#707070]'>
-                        <FontAwesomeIcon icon={faFilePdf} />
-                        <p className='text-[#222222] underline text-base'>Document Name</p>
+                    <div key={rs.id} className='px-5 py-3 cursor-pointer flex items-center gap-x-5 bg-[#FAFAFA] border-b border-sp-solid-gray-800'>
+                        <FontAwesomeIcon icon={faFilePdf} className='text-sp-solid-gray-800' />
+                        <p className='text-sp-solid-gray-800 underline text-base'>Document Name</p>
                     </div>
                 ))
             }

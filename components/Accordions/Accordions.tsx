@@ -11,7 +11,7 @@ const Accordions = ({content} : {content : accordionsType[]}) => {
   return (
     <div>
         {
-            content.map((dt : accordionsType) => <AccordionsCard id={dt.id} question={dt.question} answer={dt.answer} />)
+            content.map((dt : accordionsType) => <AccordionsCard key={dt.id} id={dt.id} question={dt.question} answer={dt.answer} />)
         }
     </div>
   )

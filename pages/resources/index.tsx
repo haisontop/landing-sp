@@ -1,4 +1,4 @@
-import { Button, CareersInRealEasts, Footer, Header } from "@/components";
+import { Button, CareersInRealEasts, Footer, Header, SubHeader } from "@/components";
 import Image from "next/image";
 import React from "react";
 import resource from "../../fakedata/ResourseFakeDate";
@@ -15,23 +15,7 @@ const index = () => {
       <Header secondaryLinks={[]} />
 
       <div className="bg-sp-solid-gray-500">
-        <div className="bg-sp-pink">
-          <div className="container mx-auto">
-            <div className="flex gap-x-3 items-center border-t-2 border-sp-solid-pink-600  py-6 mx-4 justify-center lg:justify-start">
-              <div>
-                <Image
-                  alt="small logo"
-                  width={22}
-                  height={22}
-                  src={"/image/current-listing/SmallSquare-dark.png"}
-                />
-              </div>
-              <h1 className="text-base font-medium text-sp-black">
-                Donna Spillane
-              </h1>
-            </div>
-          </div>
-        </div>
+        <SubHeader text="Resources" />
         <div className="container mx-auto px-4 mt-5 lg:mt-10">
           <div className="grid lg:grid-cols-2 lg:gap-y-8">
             {resource.map((rs: resourcesTypes) => (
@@ -51,7 +35,7 @@ const index = () => {
               <h1 className="text-3xl font-bold text-sp-black">
                 Frequently Asked Questions
               </h1>
-              <p className="mt-6 text-base text-sp-black/80">
+              <p className="mt-6 text-base text-sp-solid-gray-800">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -59,7 +43,7 @@ const index = () => {
               </p>
             </div>
             <div>
-              <p className="text-base text-sp-black/80">
+              <p className="text-base text-sp-solid-gray-800">
                 Still have questions?
               </p>
               <Button

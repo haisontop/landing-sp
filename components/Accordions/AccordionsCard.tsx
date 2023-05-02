@@ -8,7 +8,7 @@ const AccordionsCard = ({id, question, answer} : accordionsType) => {
   return (
     <div className='cursor-pointer bg-white px-7 py-5 border border-sp-solid-gray-600 mb-2 rounded-lg'>
     <div className='w-full flex justify-between items-center text-base font-medium text-sp-black' onClick={()=>setOpen(!open)}>
-        <h2>{question}</h2>
+        <h2 className='text-lg'>{question}</h2>
         {
             open ? 
            <FontAwesomeIcon icon={faAngleUp} className='text-xl text-[#707070]' />

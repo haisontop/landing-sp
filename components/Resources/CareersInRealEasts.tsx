@@ -18,7 +18,7 @@ export const CareersInRealEasts = () => {
           <h1 className="text-4xl font-semibold mt-[40px] md:mt-0 text-sp-solid-blue-800">
             Careers in Real Estate
           </h1>
-          <p className="text-base mt-[32px] text-sp-black/80">
+          <p className="text-base mt-[32px] text-sp-solid-gray-800">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -35,7 +35,7 @@ export const CareersInRealEasts = () => {
           <h1 className="text-4xl font-semibold mt-[40px] text-sp-black">
             We’re always on the hunt for passionate individuals
           </h1>
-          <p className="text-base mt-[32px] text-sp-black/80">
+          <p className="text-base mt-[32px] text-sp-solid-gray-800">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
