@@ -7,6 +7,7 @@ import {
   faFilePdf,
   faLocationDot,
   faRuler,
+  faShare,
   faVideo,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -47,14 +48,24 @@ const ListingSideCard = () => {
   ];
   return (
     <div>
-      <div className=" grid grid-cols-12 border-b-2">
-        <div className="text-base flex gap-x-2 col-span-10 border-r-2 px-10  py-4">
+      <div className=" grid lg:grid-cols-12 border-b-2">
+        <div className="text-base flex gap-x-2 lg:col-span-10 border-r-2 px-10  py-4">
           <h3 className="font-semibold text-sp-solid-gray-600">For Sale</h3>
           <h3 className="font-semibold text-sp-solid-gray-600">/</h3>
           <h3 className="font-semibold text-sp-solid-blue-700">
             13-85 Beastly Ln, Newcastle
           </h3>
         </div>
+        <a
+              href="#"
+              className="
+              px-8 py-6 col-span-2 border-l border-gray-200
+              transition
+              hover:bg-sp-blue hover:text-white  
+            "
+            >
+              <FontAwesomeIcon icon={faShare} className="w-5" />
+            </a>
       </div>
       <div className="mt-8 mx-10">
         <button className="flex gap-x-3 items-center font-medium text-sm py-2 px-3 bg-[#F0F2F6] rounded-lg">

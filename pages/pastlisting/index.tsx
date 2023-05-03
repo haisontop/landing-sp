@@ -51,9 +51,9 @@ const index = () => {
               </Link>
             </h2>
           </div>
-          <div className="container px-4 mx-auto">
+          <div className="container mx-auto">
             <section className="mt-10">
-              <div className="flex flex-col lg:grid grid-cols-5 gap-4">
+              <div className="flex flex-col lg:grid grid-cols-5 gap-6 lg:gap-4">
                 <div className="col-span-3">
                   <PropertyCard
                     id={123456}
@@ -92,7 +92,7 @@ const index = () => {
                   </div>
                 </div>
               </div>
-              <div className="grid lg:grid-cols-4 gap-4 mt-6">
+              <div className="grid lg:grid-cols-4 gap-6 lg:gap-4 mt-6">
                 {properties.map((property) => (
                   <PropertyCard
                     type="vertical"
@@ -111,10 +111,10 @@ const index = () => {
           View More
         </button>
       </div>
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto">
         <UniqSalesProcces />
       </div>
-      <div className="mt-28" />
+      <div className=" mt-[67px] lg:mt-28" />
       <OurMission />
       <Footer />
     </div>

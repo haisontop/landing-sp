@@ -9,10 +9,10 @@ const index = () => {
       <Header secondaryLinks={[]} />
       <div className=" bg-sp-solid-gray-500">
         <div className="container px-4 mx-auto">
-          <div className="grid grid-cols-12 gap-x-4">
-            <div className=" col-span-8">
+          <div className="grid lg:grid-cols-12 gap-x-4">
+            <div className=" lg:col-span-8">
               <div className="mb-12">{/* carousel */}</div>
-              <div className=" w-8/12 mx-auto">
+              <div className="hidden lg:block lg:w-8/12 mx-auto">
                 <h1 className="text-5xl font-bold">
                   Period Elegance, Prized Location - Auction unless sold prior
                 </h1>
@@ -76,7 +76,7 @@ const index = () => {
               </div>
               <Map />
             </div>
-            <div className="col-span-4">
+            <div className="lg:col-span-4">
               <div className="bg-white rounded-2xl border-2 border-sp-solid-gray-600 mb-4 shadow-md">
                 <ListingSideCard />
               </div>

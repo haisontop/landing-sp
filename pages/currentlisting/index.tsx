@@ -42,16 +42,16 @@ const index = () => {
             <h1 className="text-4xl font-bold text-sp-solid-blue-800 hidden lg:inline-block">
               Auctions & Opens this Weekend
             </h1>
-            <h2 className="text-center text-base text-sp-black">
+            <h2 className="text-center text-base text-sp-solid-gray-800">
               Showing{" "}
               <Link href="" className="underline">
                 Upcoming Auctions First
               </Link>
             </h2>
           </div>
-          <div className="container px-4 mx-auto">
+          <div className="container mx-auto">
             <section className="mt-10">
-              <div className=" flex flex-col lg:grid lg:grid-cols-4 gap-4">
+              <div className=" flex flex-col lg:grid lg:grid-cols-4 gap-6 lg:gap-4">
                 <div className="col-span-2">
                   <PropertyCard
                     id={123456}
@@ -77,7 +77,7 @@ const index = () => {
           </div>
         </div>
       </div>
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto">
         <section className=" -mt-64">
           <div className=" flex flex-col lg:grid grid-cols-12 gap-4 px-4">
             <div className="col-span-8">
@@ -100,7 +100,7 @@ const index = () => {
         </section>
         <UniqSalesProcces />
       </div>
-      <div className="mt-28" />
+      <div className="mt-[67px] lg:mt-28" />
       <Footer />
     </div>
   );

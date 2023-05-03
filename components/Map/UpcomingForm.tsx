@@ -5,7 +5,7 @@ import { Button } from '../Buttons'
 
 const UpcomingForm = () => {
   return (
-    <div className='col-span-4'>
+    <div className='lg:col-span-4'>
         <div className='px-10 py-6 border-b-2'>
             <p className='text-base font-semibold underline'>13-85 Beastly Ln, Newcastle</p>
         </div>

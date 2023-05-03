@@ -34,7 +34,7 @@ const index = () => {
         <SearchServices />
       </div>
       <UniqSalesProcces />
-      <div className="mt-28" />
+      <div className="mt-[67px] md:mt-28" />
       <Footer />
     </div>
   );
