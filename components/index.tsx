@@ -14,10 +14,10 @@ export * from "./Search/SearchServices";
 export * from "./UniqSalesProcces";
 export * from "./Search/SearchBar";
 export * from "./OurMission";
-export * from "./map";
+export * from "./Map";
 export * from "./PropertyList";
-export * from "./about/AboutBanner";
-export * from "./about/OurFrandlyStaff";
-export * from "./about/IndustrialKnowladge";
+export * from "./About/AboutBanner";
+export * from "./About/OurFrandlyStaff";
+export * from "./About/IndustrialKnowladge";
 export * from "./StaffProfile"
 export * from "./Resources"
