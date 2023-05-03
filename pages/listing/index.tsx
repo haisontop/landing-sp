@@ -1,6 +1,6 @@
 import { ApprasialForm, Footer, Header, Map, PropertyList } from "@/components";
-import ListingSideCard from "@/components/listing/ListingSideCard";
-import OurSellerSaying from "@/components/listing/OurSellerSaying";
+import ListingSideCard from "@/components/Listing/ListingSideCard";
+import OurSellerSaying from "@/components/Listing/OurSellerSaying";
 import React from "react";
 
 const index = () => {

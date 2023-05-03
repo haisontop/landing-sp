@@ -1,6 +1,6 @@
 import { DonnasCurrentListing, DonnasRecentlySold, DonnasStats, Footer, Header, RequestAgentCard, SubHeader } from '@/components'
 import SellerFeedbackCard from '@/components/Cards/SellerFeedbackCard'
-import DonnasTeam from '@/components/about/OurFrandlyStaff/DonnasTeam'
+import DonnasTeam from '@/components/About/OurFrandlyStaff/DonnasTeam'
 import Image from 'next/image'
 import React from 'react'
 
