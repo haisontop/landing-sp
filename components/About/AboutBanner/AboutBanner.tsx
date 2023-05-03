@@ -24,14 +24,16 @@ export const AboutBanner = () => {
             aliquip ex ea commodo consequat.
           </p>
         </div>
-        <div className="relative w-full h-52 lg:h-[600px] rounded-2xl overflow-hidden col-span-3 shadow-xl shadow-sp-blue/40 mt-9 lg:mt-0">
+        <div className="relative w-full h-[400px] lg:h-[600px] rounded-2xl overflow-hidden col-span-3 shadow-xl shadow-sp-blue/40 mt-9 lg:mt-0">
           <Image
             alt="hero group image"
             src={"/image/home/hero-xlarge.png"}
             className="object-cover"
             fill
           />
-          <Tag label="The Spillane Property Team" icon={faUser} className="absolute items-center bottom-6 left-6" /> 
+          <div className="absolute top-6 lg:bottom-6 lg:top-auto left-6">
+          <Tag label="The Spillane Property Team" icon={faUser} /> 
+          </div>
         </div>
       </div>
     </section>

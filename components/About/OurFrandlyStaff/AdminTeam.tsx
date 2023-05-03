@@ -26,7 +26,7 @@ const AdminTeam = () => {
 
   ];
   return (
-    <div className="mt-20 px-4 lg:px-14 border-t">
+    <div className="mt-10 lg:mt-20 px-4 lg:px-14 border-t">
       <h1 className="text-base font-medium mt-10">Our Admin Team</h1>
       <div className="mt-4 grid lg:grid-cols-3 gap-4">
         {items.map((it: any, index) => (
