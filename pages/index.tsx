@@ -29,7 +29,6 @@ export async function getStaticProps() {
 }
 
 export default function Home({ secondaryLinks }: { secondaryLinks: any }) {
-
   return (
     <>
       <Head>
@@ -67,8 +66,8 @@ export default function Home({ secondaryLinks }: { secondaryLinks: any }) {
               </div>
               <div className="col-span-1 flex flex-col-reverse md:flex-col gap-4 mt-4 lg:mt-0">
                 <ApprasialForm />
-                <div className="flex md:w-full overflow-scroll flex-col-reverse md:flex-col  md:overflow-hidden rounded-xl gap-y-4">
-                  <div className="grid md:grid-cols-2 gap-4">
+                <div className="hidden md:flex md:w-full overflow-scroll flex-col-reverse md:flex-col  md:overflow-hidden rounded-xl gap-y-4">
+                  <div className="grid grid-cols-2 gap-4">
                     <Card
                       color="pink"
                       className="py-8 px-6 text-center text-sp-blue flex flex-col justify-center"
@@ -107,9 +106,50 @@ export default function Home({ secondaryLinks }: { secondaryLinks: any }) {
                     </p>
                   </Card>
                 </div>
+                <div className="grid grid-flow-col auto-cols-[370px] overflow-x-auto gap-x-2 md:hidden ">
+                  <Card
+                    color="pink"
+                    className="py-8 px-8 text-center text-sp-blue shrink"
+                  >
+                    <img src="daysOnMarket.png" alt="" />
+                    <h4 className="font-bold text-3xl mb-3">
+                      20 Days on Market
+                    </h4>
+                    <p className="opacity-90">
+                      This is a short description about the days on market
+                      statistic, why is this good?
+                    </p>
+                  </Card>
+                  <Card
+                    color="pink"
+                    className="py-8 px-6 text-center text-sp-blue flex flex-col justify-center"
+                  >
+                    <h4 className="font-bold text-2xl mb-3">
+                      93% Auction <br /> Clearance
+                    </h4>
+                    <p className="opacity-90 text-sm">
+                      This is a short description <br /> about the days on market
+                    </p>
+                  </Card>
+
+                  <Card
+                    color="pink"
+                    className="py-8 px-6 text-center text-sp-blue flex flex-col justify-center"
+                  >
+                    <h4 className="font-bold text-2xl mb-3">
+                      100% List <br /> To Sell
+                    </h4>
+                    <p className="opacity-90 text-sm">
+                      This is a short description <br /> about the days on market
+                    </p>
+                  </Card>
+                </div>
               </div>
             </div>
           </section>
+        </div>
+        <div className="lg:hidden mt-4 mx-4">
+          <SingupProperty />
         </div>
         <PropertyList />
         <OurMission />

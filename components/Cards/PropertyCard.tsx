@@ -55,7 +55,7 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({
             </div>
         </div>
         <div
-          className={`flex flex-col text-sp-blue grow ${
+          className={`flex flex-col h-full justify-between text-sp-blue grow ${
             type !== "vertical" && "basis-2/3"
           }`}
         >

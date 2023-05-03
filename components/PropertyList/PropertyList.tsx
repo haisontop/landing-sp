@@ -10,8 +10,10 @@ export const PropertyList = () => {
   return (
     <section className="overflow-x-auto">
       <div className="container mx-auto px-4">
-        <div className="grid grid-flow-col auto-cols-[350px] md:auto-cols-[400px] gap-4 pt-10 md:pt-32 scrollbar-hide">
+        <div className="grid grid-flow-col auto-cols-[370px] md:auto-cols-[400px] gap-2 md:gap-4 pt-10 md:pt-32 scrollbar-hide">
+          <div className="hidden md:inline-block">
           <SingupProperty />
+          </div>
           {properties.map((property) => (
             <PropertyCard
               type="vertical"

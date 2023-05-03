@@ -26,7 +26,7 @@ export function Nav() {
   return (
     <div className="flex justify-center">
       <nav
-        className={`rounded-lg w-full md:w-auto bg-sp-blue border border-blue-900 px-3 md:px-6 flex self-center justify-self-center mt-10 lg:mt-0 lg:fixed z-30 ${
+        className={`rounded-lg w-full md:w-auto bg-sp-blue border border-blue-900 px-6 flex self-center justify-between md:justify-self-center mt-10 lg:mt-0 lg:fixed z-30 ${
           scrollPosition >= scrollPoint && "drop-shadow-lg"
         }`}
       >
@@ -81,8 +81,7 @@ export function Nav() {
         >
           <MenuIcon />
         </a>
-        <a
-          href="#"
+        <div
           className="
             text-white 
              pl-6 py-4 lg:hidden
@@ -93,7 +92,7 @@ export function Nav() {
             }}
         >
           <MenuIcon />
-        </a>
+        </div>
       </nav>
     </div>
   );
