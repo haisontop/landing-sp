@@ -20,4 +20,5 @@ export * from "./About/AboutBanner";
 export * from "./About/OurFrandlyStaff";
 export * from "./About/IndustrialKnowladge";
 export * from "./StaffProfile"
-export * from "./Resources"
+export * from "./Resources";
+export * from "./Carousel"

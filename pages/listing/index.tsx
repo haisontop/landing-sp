@@ -1,7 +1,13 @@
-import { ApprasialForm, Footer, Header, Map, PropertyList } from "@/components";
+import { ApprasialForm, Carousel, Footer, Header, Map, PropertyList } from "@/components";
 import ListingSideCard from "@/components/Listing/ListingSideCard";
 import OurSellerSaying from "@/components/Listing/OurSellerSaying";
 import React from "react";
+import { EmblaOptionsType } from "embla-carousel-react";
+
+
+const OPTIONS: EmblaOptionsType = {}
+const SLIDE_COUNT = 5
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 
 const index = () => {
   return (
@@ -11,7 +17,9 @@ const index = () => {
         <div className="container px-4 mx-auto">
           <div className="grid lg:grid-cols-12 gap-x-4">
             <div className=" lg:col-span-8">
-              <div className="mb-12">{/* carousel */}</div>
+              <div className="mb-12">
+                {/* <Carousel slides={SLIDES} options={OPTIONS} /> */}
+              </div>
               <div className="hidden lg:block lg:w-8/12 mx-auto">
                 <h1 className="text-5xl font-bold">
                   Period Elegance, Prized Location - Auction unless sold prior
