@@ -8,11 +8,28 @@ import {
 } from "@/components/Resources/ResourcesCard";
 import Accordions from "@/components/Accordions/Accordions";
 import { accordion } from "@/fakedata/AccourdiansFakeData";
+import builder from "@builder.io/react";
 
-const index = () => {
+export async function getStaticProps() {
+  builder.init("bc22dc3b592c4fb7860d855ad1b2c528");
+
+  const secondaryLinks = await builder.getAll("secondary-nav", {
+    // You can use options for queries, sorting, and targeting here
+    // https://github.com/BuilderIO/builder/blob/main/packages/core/docs/interfaces/GetContentOptions.md
+  });
+
+  return {
+    props: {
+      secondaryLinks: secondaryLinks || null,
+    },
+    revalidate: 5,
+  };
+}
+
+const index = ({ secondaryLinks }: { secondaryLinks: any }) => {
   return (
     <>
-      <Header secondaryLinks={[]} />
+      <Header secondaryLinks={secondaryLinks} />
 
       <div className="bg-sp-solid-gray-500">
         <SubHeader text="Resources" />

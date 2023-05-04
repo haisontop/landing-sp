@@ -15,6 +15,23 @@ import React from "react";
 import { EmblaOptionsType } from "embla-carousel-react";
 import Image from "next/image";
 import ListingArticle from "@/components/Listing/ListingArticle";
+import builder from "@builder.io/react";
+
+export async function getStaticProps() {
+  builder.init("bc22dc3b592c4fb7860d855ad1b2c528");
+
+  const secondaryLinks = await builder.getAll("secondary-nav", {
+    // You can use options for queries, sorting, and targeting here
+    // https://github.com/BuilderIO/builder/blob/main/packages/core/docs/interfaces/GetContentOptions.md
+  });
+
+  return {
+    props: {
+      secondaryLinks: secondaryLinks || null,
+    },
+    revalidate: 5,
+  };
+}
 
 const agent = [
   {
@@ -29,7 +46,7 @@ const agent = [
   },
 ];
 
-const index = () => {
+const index = ({ secondaryLinks }: { secondaryLinks: any }) => {
   const item = [
     "/image/listing/166993800256625328-rsd.png",
     "https://placehold.it/800x600",
@@ -39,7 +56,7 @@ const index = () => {
   return (
     <div>
       <div className="hidden lg:block">
-        <Header secondaryLinks={[]} />
+        <Header secondaryLinks={secondaryLinks} />
       </div>
       <div className="fixed lg:hidden top-0 z-40 flex justify-center w-full">
         <Nav />

@@ -3,12 +3,29 @@ import SellerFeedbackCard from '@/components/Cards/SellerFeedbackCard'
 import DonnasTeam from '@/components/About/OurFrandlyStaff/DonnasTeam'
 import Image from 'next/image'
 import React from 'react'
+import builder from '@builder.io/react'
 
-const index = () => {
+export async function getStaticProps() {
+  builder.init("bc22dc3b592c4fb7860d855ad1b2c528");
+
+  const secondaryLinks = await builder.getAll("secondary-nav", {
+    // You can use options for queries, sorting, and targeting here
+    // https://github.com/BuilderIO/builder/blob/main/packages/core/docs/interfaces/GetContentOptions.md
+  });
+
+  return {
+    props: {
+      secondaryLinks: secondaryLinks || null,
+    },
+    revalidate: 5,
+  };
+}
+
+const index = ({ secondaryLinks }: { secondaryLinks: any }) => {
   const list = ["1","2","3"]
   return (
     <>
-      <Header secondaryLinks={[]} />
+      <Header secondaryLinks={secondaryLinks} />
       <main className="bg-sp-solid-gray-500 pb-[67px] lg:pb-0">
         <SubHeader text={"Donna Spillane"} />
         <div className='lg:grid grid-cols-3 gap-x-16 container mx-auto px-4 mt-10'>

@@ -6,15 +6,33 @@ import {
   UniqSalesProcces,
 } from "@/components";
 import { PropertyCard } from "@/components/Cards/PropertyCard";
+import builder from "@builder.io/react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const index = () => {
+export async function getStaticProps() {
+  builder.init("bc22dc3b592c4fb7860d855ad1b2c528");
+
+  const secondaryLinks = await builder.getAll("secondary-nav", {
+    // You can use options for queries, sorting, and targeting here
+    // https://github.com/BuilderIO/builder/blob/main/packages/core/docs/interfaces/GetContentOptions.md
+  });
+
+  return {
+    props: {
+      secondaryLinks: secondaryLinks || null,
+    },
+    revalidate: 5,
+  };
+}
+
+
+const index = ({ secondaryLinks }: { secondaryLinks: any }) => {
   const properties = [1234567, 1234567, 1234567, 1234567, 1234567, 1234567];
   return (
     <div>
-      <Header secondaryLinks={[]} />
+      <Header secondaryLinks={secondaryLinks} />
       <div className="bg-[#EEF0F4] pb-80">
         <div className="bg-sp-pink h-20 lg:h-24" />
         <div className="container px-4 mx-auto">

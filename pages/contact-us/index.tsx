@@ -1,11 +1,28 @@
 import { Button, Footer, Header, SubHeader } from '@/components'
+import builder from '@builder.io/react';
 import React from 'react'
 
-const index = () => {
+export async function getStaticProps() {
+  builder.init("bc22dc3b592c4fb7860d855ad1b2c528");
+
+  const secondaryLinks = await builder.getAll("secondary-nav", {
+    // You can use options for queries, sorting, and targeting here
+    // https://github.com/BuilderIO/builder/blob/main/packages/core/docs/interfaces/GetContentOptions.md
+  });
+
+  return {
+    props: {
+      secondaryLinks: secondaryLinks || null,
+    },
+    revalidate: 5,
+  };
+}
+
+const index = ({ secondaryLinks }: { secondaryLinks: any }) => {
   const contact = [{type : "Phone", address : "(02) 1234 5678"}, {type : "Email", address : "hello@spillaneproperty.com.au"}, {type : "Address", address : " 4/103 Tudor St, Hamilton NSW"},]
   return (
     <div>
-      <Header secondaryLinks={[]} />
+      <Header secondaryLinks={secondaryLinks} />
       <SubHeader text='Contact Us' />
       <main className="bg-sp-solid-gray-500 pb-[72px]">
           <div className='container mx-auto px-4 pt-8  lg:pt-10 grid lg:grid-cols-2 lg:gap-x-60'>
