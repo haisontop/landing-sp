@@ -8,9 +8,12 @@ export const PropertyList = () => {
     1234567, 1234567, 1234567, 1234567, 1234567, 1234567, 1234567,
   ];
   return (
-    <section className="overflow-x-auto">
+    <section className="">
       <div className="container mx-auto px-4">
-        <div className="grid grid-flow-col auto-cols-[370px] md:auto-cols-[400px] gap-2 md:gap-4 pt-10 md:pt-32 scrollbar-hide">
+      <div className="block md:hidden">
+          <SingupProperty />
+          </div>
+        <div className="grid grid-flow-col auto-cols-[370px] md:auto-cols-[400px] gap-2 md:gap-4 pt-10 md:pt-32 scrollbar-hide overflow-x-auto">
           <div className="hidden md:inline-block">
           <SingupProperty />
           </div>

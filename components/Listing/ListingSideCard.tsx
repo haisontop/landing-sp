@@ -47,8 +47,8 @@ const ListingSideCard = () => {
     },
   ];
   return (
-    <div>
-      <div className=" grid lg:grid-cols-12 border-b-2">
+    <div className="bg-white lg:bg-transparent pt-3 lg:pt-0 rounded-3xl lg:rounded-none">
+      <div className="hidden lg:grid lg:grid-cols-12 border-b-2">
         <div className="text-base flex gap-x-2 lg:col-span-10 border-r-2 px-10  py-4">
           <h3 className="font-semibold text-sp-solid-gray-600">For Sale</h3>
           <h3 className="font-semibold text-sp-solid-gray-600">/</h3>
@@ -123,7 +123,7 @@ const ListingSideCard = () => {
           <p>Auction - Sat 22nd Oct</p>
         </button>
       </div>
-      <div className="p-10 border-b-2 grid grid-cols-2 gap-8 text-sp-solid-blue-800">
+      <div className="p-10 border-b-2 grid lg:grid-cols-2 gap-8 text-sp-solid-blue-800">
         <div className="flex items-center gap-x-3 font-sm">
           <FontAwesomeIcon icon={faRuler} />
           <p className=" underline">Floor plan</p>
@@ -141,7 +141,7 @@ const ListingSideCard = () => {
           <p className=" underline">Sales Contact</p>
         </div>
       </div>
-      <div className="p-10 border-b-2 flex gap-x-4">
+      <div className="p-10 border-b-2 flex flex-col lg:flex-row gap-4">
         <button className="bg-sp-blue text-white px-6 py-4 rounded-lg font-medium text-base w-full">
           Make an enquiry
         </button>
@@ -149,7 +149,7 @@ const ListingSideCard = () => {
           Register to bid
         </button>
       </div>
-      <div className="p-10 flex flex-col gap-y-4">
+      <div className="p-10 hidden lg:flex flex-col gap-y-4">
         {
           agent.map((ag : any, index) => <AgentCard key={index} img={ag.img} name={ag.name} profession={ag.profession} />)
         }

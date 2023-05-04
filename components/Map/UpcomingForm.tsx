@@ -22,7 +22,7 @@ const UpcomingForm = () => {
         </button>
         </div>
         </div>
-        <div className='border-t-2 p-10 mt-20'>
+        <div className='border-t-2 p-10 mt-20 hidden lg:block'>
            <button className='bg-sp-blue text-white px-6 py-4 rounded-lg font-medium text-base w-full'>
            Make an enquiry
            </button>

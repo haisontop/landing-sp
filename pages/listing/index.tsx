@@ -1,14 +1,33 @@
-import { ApprasialForm, Carousel, Footer, Header, Map, PropertyList } from "@/components";
+import {
+  AgentCard,
+  ApprasialForm,
+  Button,
+  Carousel,
+  Footer,
+  Header,
+  Map,
+  Nav,
+  PropertyList,
+} from "@/components";
 import ListingSideCard from "@/components/Listing/ListingSideCard";
 import OurSellerSaying from "@/components/Listing/OurSellerSaying";
 import React from "react";
 import { EmblaOptionsType } from "embla-carousel-react";
 import Image from "next/image";
+import ListingArticle from "@/components/Listing/ListingArticle";
 
-
-const OPTIONS: EmblaOptionsType = {}
-const SLIDE_COUNT = 5
-const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
+const agent = [
+  {
+    name: "Donna Spillane",
+    profession: "Principal and Licensed Real Estate Agent",
+    img: "/image/listing/200813_Spillane.Property-10.png",
+  },
+  {
+    name: "Patrick Skinner ",
+    profession: "Sales Associate",
+    img: "/image/listing/210714_Spillane.Property-6.png",
+  },
+];
 
 const index = () => {
   const item = [
@@ -19,89 +38,59 @@ const index = () => {
   ];
   return (
     <div>
-      <Header secondaryLinks={[]} />
+      <div className="hidden lg:block">
+        <Header secondaryLinks={[]} />
+      </div>
+      <div className="fixed lg:hidden top-0 z-40 flex justify-center w-full">
+        <Nav />
+      </div>
       <div className=" bg-sp-solid-gray-500 relative">
         <div className=" bg-sp-solid-pink-500 lg:h-[511px] top-0 w-full absolute" />
-        <div className="container px-4 mx-auto">
+        <div className="container lg:px-4 mx-auto">
           <div className="grid lg:grid-cols-12 gap-x-4 relative z-20">
             <div className=" lg:col-span-8">
               <div className="lg:mb-12">
                 <Carousel loop>
-                  {
-                    item.map((src, i) =>(
-                      <div className="relative h-[471px] md:h-[715px] flex-[0_0_100%]" key={i}>
-                        <Image src={src} fill alt="alt" className="object-cover" />
-                      </div>
-                    ))
-                  }
+                  {item.map((src, i) => (
+                    <div
+                      className="relative h-[471px] md:h-[715px] flex-[0_0_100%]"
+                      key={i}
+                    >
+                      <Image
+                        src={src}
+                        fill
+                        alt="alt"
+                        className="object-cover"
+                      />
+                    </div>
+                  ))}
                 </Carousel>
               </div>
-              <div className="hidden lg:block lg:w-8/12 mx-auto">
-                <h1 className="text-5xl font-bold">
-                  Period Elegance, Prized Location - Auction unless sold prior
-                </h1>
-                <div className="mt-10 text-lg text-justify">
-                  <p>
-                    Centrally positioned within the fantastic community of
-                    Carrington, the harbour and city on your doorstep, this
-                    character-rich weatherboard home showcases a winning
-                    combination of timeless turn of the century style and a
-                    contemporary renovation. Whilst retaining it’s original
-                    charm with high ceilings, arched hallway and ornate
-                    fireplaces this home has also recently received updates with
-                    a brand new gas equipped kitchen, two new bathrooms, new
-                    plumbing and completely re-painted inside and out, just to
-                    name a few. Flexible in configuration, the front room could
-                    be used as an office, second living area or fourth bedroom.
-                    The air-conditioned upstairs master bedroom is generous in
-                    size and opens onto the front balcony. The rear of the home
-                    has been completely renovated with new Jarrah flooring and
-                    an open plan dining/kitchen area that flows freely to the
-                    covered timber deck overlooking a fully fenced yard complete
-                    with vegie gardens. Also providing prized off-street parking
-                    this home is truly an exceptional property that is sure to
-                    impress.
-                  </p>
-                  <ul className="mt-10 flex flex-col gap-y-3">
-                    <li>
-                      * Newly renovated character-rich home in the heart of
-                      Carringto
-                    </li>
-                    <li>
-                      * Brand new kitchen with timber benchtops and quality
-                      appliances
-                    </li>
-                    <li>
-                      * Two new bathrooms with contemporary floor-to-ceiling
-                      tiling
-                    </li>
-                    <li>
-                      * Charm and character with high ceilings and ornate
-                      fireplaces
-                    </li>
-                    <li>
-                      * Ground floor bedroom/office offers flexibility as extra
-                      living space
-                    </li>
-                    <li>
-                      * Back yard with brand new fencing and vegetable garden
-                      beds
-                    </li>
-                    <li>
-                      * Prized off-street parking for one vehicle; side access
-                      from Doran St
-                    </li>
-                    <li>
-                      * Walking distance to cafes, school, harbour and transport
-                    </li>
-                  </ul>
-                  <p className="mt-10">Council rates: $567 p/qtr</p>
-                </div>
+              <div className="hidden lg:block lg:w-8/12 mx-auto px-4 lg:px-0">
+                <ListingArticle />
               </div>
-              <Map />
+              <div className="px-4 lg:px-0">
+                <div className="block lg:hidden">
+                  <ListingSideCard />
+                </div>
+                <div className="lg:hidden mt-10">
+                  <ListingArticle />
+                </div>
+                <div className="lg:hidden mt-11 flex flex-col gap-y-2">
+                  {agent.map((ag: any, index) => (
+                    <AgentCard
+                      key={index}
+                      img={ag.img}
+                      name={ag.name}
+                      profession={ag.profession}
+                    />
+                  ))}
+                </div>
+                <Map />
+              </div>
             </div>
-            <div className="lg:col-span-4">
-              <div className="bg-white rounded-2xl border-2 border-sp-solid-gray-600 mb-4 shadow-md">
+            <div className="lg:col-span-4 hidden lg:block">
+              <div className="bg-white rounded-2xl border-2 border-sp-solid-gray-600 mb-4 shadow-md overflow-hidden">
                 <ListingSideCard />
               </div>
               <ApprasialForm />
@@ -109,11 +98,17 @@ const index = () => {
           </div>
         </div>
         <div className=" container mx-auto px-4 mt-[80px]">
-        <h1 className='font-semibold text-2xl'>What our sellers are saying</h1>
+          <h1 className="font-semibold text-2xl">
+            What our sellers are saying
+          </h1>
         </div>
         <OurSellerSaying />
-        <div className="mb-20 mt-[79px]">
-            <PropertyList />
+        <div className="pb-10 lg:pb-20 mt-[79px]">
+          <PropertyList />
+          <div className="flex gap-x-2 lg:hidden justify-center mt-8">
+              <Button label={"View all listings"} type="blue" />
+              <Button label={"Contact Us"} type="outline" className="border-sp-blue" />
+          </div>
         </div>
       </div>
       <Footer />

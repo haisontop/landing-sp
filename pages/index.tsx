@@ -159,9 +159,7 @@ export default function Home({ secondaryLinks }: { secondaryLinks: any }) {
             </div>
           </section>
         </div>
-        <div className="lg:hidden mt-4 mx-4">
-          <SingupProperty />
-        </div>
+        <div className="mt-4 lg:mt-0" />
         <PropertyList />
         <OurMission />
         <Footer />
