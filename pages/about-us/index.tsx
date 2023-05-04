@@ -1,4 +1,4 @@
-import { AboutBanner, Footer, Header, IndustrialKhowladge, OurFriendlyStaff, SubHeader } from "@/components";
+import { AboutBanner, Footer, Header, IndustrialKnowledge, OurFriendlyStaff, SubHeader } from "@/components";
 import builder from "@builder.io/react";
 import Image from "next/image";
 import React from "react";
@@ -28,7 +28,7 @@ const index = ({ secondaryLinks }: { secondaryLinks: any }) => {
        <AboutBanner />
        <div className="mt-16" />
        <OurFriendlyStaff />
-       <IndustrialKhowladge />
+       <IndustrialKnowledge />
       </main>
       <Footer />
     </>

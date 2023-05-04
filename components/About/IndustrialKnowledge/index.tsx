@@ -1,1 +1,1 @@
-export {IndustrialKhowladge} from "./IndustrialKowledge"
+export { IndustrialKnowledge } from "./IndustrialKnowledge";

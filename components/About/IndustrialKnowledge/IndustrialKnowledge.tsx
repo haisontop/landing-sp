@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-export const IndustrialKhowladge = () => {
+export const IndustrialKnowledge = () => {
   return (
     <div className="lg:grid grid-cols-7 container mx-auto gap-x-36 mt-10 lg:mt-[104px]">
       <div className="col-span-2 flex items-center px-4 lg:px-0">
