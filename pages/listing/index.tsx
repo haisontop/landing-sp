@@ -12,7 +12,6 @@ import {
 import ListingSideCard from "@/components/Listing/ListingSideCard";
 import OurSellerSaying from "@/components/Listing/OurSellerSaying";
 import React from "react";
-import { EmblaOptionsType } from "embla-carousel-react";
 import Image from "next/image";
 import ListingArticle from "@/components/Listing/ListingArticle";
 import builder from "@builder.io/react";
