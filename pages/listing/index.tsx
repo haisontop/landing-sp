@@ -3,6 +3,7 @@ import ListingSideCard from "@/components/Listing/ListingSideCard";
 import OurSellerSaying from "@/components/Listing/OurSellerSaying";
 import React from "react";
 import { EmblaOptionsType } from "embla-carousel-react";
+import Image from "next/image";
 
 
 const OPTIONS: EmblaOptionsType = {}
@@ -10,15 +11,30 @@ const SLIDE_COUNT = 5
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 
 const index = () => {
+  const item = [
+    "/image/listing/166993800256625328-rsd.png",
+    "https://placehold.it/800x600",
+    "https://placehold.it/1400x800",
+    "https://placehold.it/1200x900",
+  ];
   return (
     <div>
       <Header secondaryLinks={[]} />
-      <div className=" bg-sp-solid-gray-500">
+      <div className=" bg-sp-solid-gray-500 relative">
+        <div className=" bg-sp-solid-pink-500 lg:h-[511px] top-0 w-full absolute" />
         <div className="container px-4 mx-auto">
-          <div className="grid lg:grid-cols-12 gap-x-4">
+          <div className="grid lg:grid-cols-12 gap-x-4 relative z-20">
             <div className=" lg:col-span-8">
-              <div className="mb-12">
-                {/* <Carousel slides={SLIDES} options={OPTIONS} /> */}
+              <div className="lg:mb-12">
+                <Carousel loop>
+                  {
+                    item.map((src, i) =>(
+                      <div className="relative h-[471px] md:h-[715px] flex-[0_0_100%]" key={i}>
+                        <Image src={src} fill alt="alt" className="object-cover" />
+                      </div>
+                    ))
+                  }
+                </Carousel>
               </div>
               <div className="hidden lg:block lg:w-8/12 mx-auto">
                 <h1 className="text-5xl font-bold">
@@ -92,8 +108,11 @@ const index = () => {
             </div>
           </div>
         </div>
+        <div className=" container mx-auto px-4 mt-[80px]">
+        <h1 className='font-semibold text-2xl'>What our sellers are saying</h1>
+        </div>
         <OurSellerSaying />
-        <div className="mb-20">
+        <div className="mb-20 mt-[79px]">
             <PropertyList />
         </div>
       </div>
