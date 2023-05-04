@@ -2,6 +2,8 @@ import Link from "next/link";
 import React from "react";
 import { ApprasialForm } from "../Forms";
 import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FacebookIcon, InstagramIcon } from "../Graphics";
 
 export const Footer = () => {
   const ForSale = [
@@ -33,8 +35,8 @@ export const Footer = () => {
               <li>hello@spillaneproperty.com.au</li>
               <li>4/103 Tudor St, Hamilton NSW 2303</li>
               <li className="flex gap-x-4 text-2xl">
-                <Link href={"/"}>Facebook</Link>{" "}
-                <Link href={"/"}>Instagram</Link>
+                <Link href={"/"}><FacebookIcon /></Link>{" "}
+                <Link href={"/"}><InstagramIcon /></Link>
               </li>
             </ul>
           </div>

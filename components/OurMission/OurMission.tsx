@@ -1,6 +1,8 @@
 import Image from "next/image";
 import React from "react";
 import { Button } from "../Buttons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBullseye } from "@fortawesome/free-solid-svg-icons";
 
 export const OurMission = () => {
   return (
@@ -15,7 +17,7 @@ export const OurMission = () => {
           />
         </div>
         <div className="col-span-3 flex flex-col justify-center text-sp-solid-pink-400">
-          <h4 className=" text-sm">Our Mission</h4>
+          <h4 className=" text-sm flex gap-x-2 items-center"><FontAwesomeIcon icon={faBullseye} /> Our Mission</h4>
           <div className="w-full bg-sp-solid-pink-400 h-[1px] mt-[26px]" />
           <div className="w-full h-[230px] relative rounded-2xl mt-8 md:hidden overflow-hidden">
             <Image
