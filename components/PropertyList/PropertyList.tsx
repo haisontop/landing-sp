@@ -8,7 +8,7 @@ export const PropertyList = () => {
     1234567, 1234567, 1234567, 1234567, 1234567, 1234567, 1234567,
   ];
   return (
-    <section className="">
+    <section className="relative z-10">
       <div className="container mx-auto px-4">
       <div className="block md:hidden">
           <SingupProperty />

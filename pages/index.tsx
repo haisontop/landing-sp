@@ -10,6 +10,7 @@ import {
   Carousel,
 } from "@/components";
 import { PropertyCard } from "@/components/Cards/PropertyCard";
+import { Industiral } from "@/components/Home/Industiral";
 import builder from "@builder.io/react";
 import Head from "next/head";
 import Image from "next/image";
@@ -46,10 +47,11 @@ export default function Home({ secondaryLinks }: { secondaryLinks: any }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <main className="bg-[#F0F2F6]">
         <Header secondaryLinks={secondaryLinks} />
         <div className="relative">
           <div className=" h-48 md:h-2/6 bg-sp-pink w-full absolute top-0" />
+          <div className="bg-white absolute top-48 w-full lg:shadow-xl lg:shadow-sp-solid-pink-400/80 lg:h-[950px]" />
           <section className="container mx-auto px-4 relative z-20">
             <div className="lg:grid lg:grid-cols-3 gap-4">
               <div className=" col-span-2 flex flex-col gap-4">
@@ -161,6 +163,7 @@ export default function Home({ secondaryLinks }: { secondaryLinks: any }) {
         </div>
         <div className="mt-4 lg:mt-0" />
         <PropertyList />
+        <Industiral />
         <OurMission />
         <Footer />
       </main>
