@@ -7,10 +7,12 @@ import {
   SingupProperty,
   OurMission,
   PropertyList,
+  Carousel,
 } from "@/components";
 import { PropertyCard } from "@/components/Cards/PropertyCard";
 import builder from "@builder.io/react";
 import Head from "next/head";
+import Image from "next/image";
 
 export async function getStaticProps() {
   builder.init("bc22dc3b592c4fb7860d855ad1b2c528");
@@ -27,6 +29,13 @@ export async function getStaticProps() {
     revalidate: 5,
   };
 }
+
+const images = [
+  "https://placehold.co/480x300?font=roboto&text=Slide+1",
+  "https://placehold.co/480x300?font=roboto&text=Slide+2",
+  "https://placehold.co/480x300?font=roboto&text=Slide+3",
+  "https://placehold.co/480x300?font=roboto&text=Slide+4",
+];
 
 export default function Home({ secondaryLinks }: { secondaryLinks: any }) {
   return (
@@ -128,7 +137,8 @@ export default function Home({ secondaryLinks }: { secondaryLinks: any }) {
                       93% Auction <br /> Clearance
                     </h4>
                     <p className="opacity-90 text-sm">
-                      This is a short description <br /> about the days on market
+                      This is a short description <br /> about the days on
+                      market
                     </p>
                   </Card>
 
@@ -140,7 +150,8 @@ export default function Home({ secondaryLinks }: { secondaryLinks: any }) {
                       100% List <br /> To Sell
                     </h4>
                     <p className="opacity-90 text-sm">
-                      This is a short description <br /> about the days on market
+                      This is a short description <br /> about the days on
+                      market
                     </p>
                   </Card>
                 </div>

@@ -1,50 +1,42 @@
-import { EmblaOptionsType } from "embla-carousel-react";
-// import useEmblaCarousel from "embla-carousel-react/components/useEmblaCarousel";
-import React, { useCallback, useEffect, useState } from "react";
+// import the hook and options type
+import useEmblaCarousel, { EmblaOptionsType } from "embla-carousel-react";
+import React from "react";
+import { PropsWithChildren, useEffect, useState } from "react";
+import Dots from "./Dots";
 
-interface propsType {
-  slides: number[];
-  options?: EmblaOptionsType;
-}
+// Define the props
+type Props = PropsWithChildren & EmblaOptionsType;
 
-export const Carousel = (props : propsType) => {
-//   const { slides, options } = props;
-//   const [emblaRef, emblaApi] = useEmblaCarousel(options);
-//   const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
-//   const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
-//   const [selectedIndex, setSelectedIndex] = useState(0);
-//   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
+export const Carousel = ({ children, ...options }: Props) => {
+  const [emblaRef, emblaApi] = useEmblaCarousel(options);
 
-//   const scrollPrev = useCallback(
-//     () => emblaApi && emblaApi.scrollPrev(),
-//     [emblaApi]
-//   );
-//   const scrollNext = useCallback(
-//     () => emblaApi && emblaApi.scrollNext(),
-//     [emblaApi]
-//   );
-//   const scrollTo = useCallback(
-//     (index: number) => emblaApi && emblaApi.scrollTo(index),
-//     [emblaApi]
-//   );
+  // need to selectedIndex to allow this component to re-render in react.
+  // Since emblaRef is a ref, it won't re-render even if there are internal changes to its state.
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
-//   const onSelect = useCallback(() => {
-//     if (!emblaApi) return;
-//     setSelectedIndex(emblaApi.selectedScrollSnap());
-//     setPrevBtnEnabled(emblaApi.canScrollPrev());
-//     setNextBtnEnabled(emblaApi.canScrollNext());
-//   }, [emblaApi, setSelectedIndex]);
+  useEffect(() => {
+    function selectHandler() {
+      const index = emblaApi?.selectedScrollSnap();
+      setSelectedIndex(index || 0);
+    }
 
-//   useEffect(() => {
-//     if (!emblaApi) return;
-//     onSelect();
-//     setScrollSnaps(emblaApi.scrollSnapList());
-//     emblaApi.on("select", onSelect);
-//     emblaApi.on("reInit", onSelect);
-//   }, [emblaApi, setScrollSnaps, onSelect]);
+    emblaApi?.on("select", selectHandler);
+    // cleanup
+    return () => {
+      emblaApi?.off("select", selectHandler);
+    };
+  }, [emblaApi]);
+
+  const length = React.Children.count(children);
+  const canScrollNext = !!emblaApi?.canScrollNext();
+  const canScrollPrev = !!emblaApi?.canScrollPrev();
+
   return (
-    <div>
-
-    </div>
+    <>
+      <div className="overflow-hidden" ref={emblaRef}>
+        <div className="flex">{children}</div>
+      </div>
+      <Dots itemsLength={length} selectedIndex={selectedIndex} />
+    </>
   );
 };
