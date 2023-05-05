@@ -18,6 +18,7 @@ export const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <button
+      type="submit"
       className={`
         px-6 py-4 rounded-lg flex items-center gap-2 justify-center
         ${type === "blue" ? "bg-sp-blue text-white" : ""}
