@@ -3,7 +3,7 @@ import useEmblaCarousel, { EmblaOptionsType } from "embla-carousel-react";
 import React, { useCallback } from "react";
 import { PropsWithChildren, useEffect, useState } from "react";
 import Dots from "./Dots";
-import { Nextbutton, Prevbutton } from "./NexPrevButton";
+import { Nextbutton, Prevbutton } from "./NextPrevButton";
 
 // Define the props
 type Props = PropsWithChildren & EmblaOptionsType;

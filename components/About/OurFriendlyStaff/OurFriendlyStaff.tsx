@@ -4,7 +4,7 @@ import DonnasTeam from './DonnasTeam'
 import RentalTeam from './RentalTeam'
 import AdminTeam from './AdminTeam'
 
-export const OurFrandlyStaff = () => {
+export const OurFriendlyStaff = () => {
   return (
     <section className='bg-white container mx-auto rounded-3xl pb-10'>
         <div className='px-4 lg:px-14 py-7 border-b-2 border-sp-solid-gray-600'>

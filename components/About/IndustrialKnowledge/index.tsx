@@ -1,0 +1,1 @@
+export { IndustrialKnowledge } from "./IndustrialKnowledge";

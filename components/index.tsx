@@ -17,8 +17,8 @@ export * from "./OurMission";
 export * from "./Map";
 export * from "./PropertyList";
 export * from "./About/AboutBanner";
-export * from "./About/OurFrandlyStaff";
-export * from "./About/IndustrialKnowladge";
+export * from "./About/OurFriendlyStaff";
+export * from "./About/IndustrialKnowledge";
 export * from "./StaffProfile"
 export * from "./Resources";
 export * from "./Carousel"

@@ -8,7 +8,7 @@ import {
   SubHeader,
 } from "@/components";
 import SellerFeedbackCard from "@/components/Cards/SellerFeedbackCard";
-import DonnasTeam from "@/components/About/OurFrandlyStaff/DonnasTeam";
+import DonnasTeam from "@/components/About/OurFriendlyStaff/DonnasTeam";
 import Image from "next/image";
 import React from "react";
 import builder from "@builder.io/react";

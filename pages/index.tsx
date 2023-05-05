@@ -10,7 +10,7 @@ import {
   Carousel,
 } from "@/components";
 import { PropertyCard } from "@/components/Cards/PropertyCard";
-import { Industiral } from "@/components/Home/Industiral";
+import { Industrial } from "@/components/Home/Industrial";
 import builder from "@builder.io/react";
 import Head from "next/head";
 import Image from "next/image";
@@ -163,7 +163,7 @@ export default function Home({ secondaryLinks }: { secondaryLinks: any }) {
         </div>
         <div className="mt-4 lg:mt-0" />
         <PropertyList />
-        <Industiral />
+        <Industrial />
         <OurMission />
         <Footer />
       </main>
