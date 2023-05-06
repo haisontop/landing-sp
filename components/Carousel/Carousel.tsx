@@ -6,9 +6,13 @@ import Dots from "./Dots";
 import { Nextbutton, Prevbutton } from "./NextPrevButton";
 
 // Define the props
-type Props = PropsWithChildren & EmblaOptionsType;
+interface CarouselControlProps {
+  showControls?: boolean;
+}
 
-export const Carousel = ({ children, ...options }: Props) => {
+type Props = PropsWithChildren & EmblaOptionsType & CarouselControlProps;
+
+export const Carousel = ({ children, showControls, ...options }: Props) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
 
   // need to selectedIndex to allow this component to re-render in react.
@@ -42,8 +46,12 @@ export const Carousel = ({ children, ...options }: Props) => {
     <>
       <div className="overflow-hidden relative rounded-3xl" ref={emblaRef}>
         <div className="flex">{children}</div>
-        <Nextbutton onclick={scrollNext} />
-        <Prevbutton onclick={scrollPrev} />
+        {showControls && (
+          <>
+            <Nextbutton onclick={scrollNext} />
+            <Prevbutton onclick={scrollPrev} />
+          </>
+        )}
       </div>
       <Dots itemsLength={length} selectedIndex={selectedIndex} />
     </>

@@ -7,7 +7,6 @@ import {
   SingupProperty,
   OurMission,
   PropertyList,
-  Carousel,
 } from "@/components";
 import { PropertyCard } from "@/components/Cards/PropertyCard";
 import { Industrial } from "@/components/Home/Industrial";

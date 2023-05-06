@@ -66,7 +66,7 @@ const index = ({ secondaryLinks }: { secondaryLinks: any }) => {
           <div className="grid lg:grid-cols-12 gap-x-4 relative z-20">
             <div className=" lg:col-span-8">
               <div className="lg:mb-12">
-                <Carousel loop>
+                <Carousel loop showControls>
                   {item.map((src, i) => (
                     <div
                       className="relative h-[471px] md:h-[715px] flex-[0_0_100%]"
