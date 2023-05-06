@@ -22,3 +22,4 @@ export * from "./About/IndustrialKnowledge";
 export * from "./StaffProfile"
 export * from "./Resources";
 export * from "./Carousel"
+export * from "./ContactForm"

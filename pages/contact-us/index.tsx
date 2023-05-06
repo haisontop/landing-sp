@@ -1,6 +1,6 @@
-import { Button, Footer, Header, SubHeader } from "@/components";
-import builder from "@builder.io/react";
-import React from "react";
+import { Button, Footer, Form, Header, SubHeader } from '@/components'
+import builder from '@builder.io/react';
+import React from 'react'
 
 export async function getStaticProps() {
   builder.init("bc22dc3b592c4fb7860d855ad1b2c528");
@@ -18,12 +18,16 @@ export async function getStaticProps() {
   };
 }
 
+const contact = [{type : "Phone", address : "(02) 1234 5678"}, {type : "Email", address : "hello@spillaneproperty.com.au"}, {type : "Address", address : " 4/103 Tudor St, Hamilton NSW"},]
+
+export interface valueTypes {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+}
+
 const index = ({ secondaryLinks }: { secondaryLinks: any }) => {
-  const contact = [
-    { type: "Phone", address: "(02) 1234 5678" },
-    { type: "Email", address: "hello@spillaneproperty.com.au" },
-    { type: "Address", address: " 4/103 Tudor St, Hamilton NSW" },
-  ];
   return (
     <div>
       <Header secondaryLinks={secondaryLinks} />
@@ -60,49 +64,7 @@ const index = ({ secondaryLinks }: { secondaryLinks: any }) => {
             <h1 className="text-4xl font-bold text-sp-solid-blue-800">
               General Enquires
             </h1>
-            <form action="" className="mt-10 text-sp-solid-gray-800">
-              <label className="text-lg font-medium">
-                Your Name <sup className="text-sp-solid-pink-900">*</sup>
-              </label>
-              <br />
-              <input
-                placeholder="John Doe"
-                type="text"
-                className="text-base p-4 border border-sp-solid-pink-600 rounded-lg mt-3 w-full lg:w-2/3"
-              />
-              <div className="mt-8" />
-              <label className="text-lg font-medium">
-                Email Address <sup className="text-sp-solid-pink-900">*</sup>
-              </label>
-              <br />
-              <input
-                placeholder="email@address.com.au"
-                type="email"
-                className="text-base p-4 border border-sp-solid-pink-600 rounded-lg mt-3 w-full lg:w-3/4"
-              />
-              <div className="mt-8" />
-              <label className="text-lg font-medium">
-                Phone Number <sup className="text-sp-solid-pink-900">*</sup>
-              </label>
-              <br />
-              <input
-                placeholder="Your phone number"
-                type="number"
-                className="text-base p-4 border border-sp-solid-pink-600 rounded-lg mt-3 w-full lg:w-auto "
-              />
-              <div className="mt-8" />
-              <label className="text-lg font-medium">Message</label>
-              <br />
-              <textarea
-                placeholder="Your message here"
-                className="text-base p-4 border border-sp-solid-pink-600 rounded-lg mt-3 w-full h-[114px] "
-              />
-              <Button
-                type="blue"
-                label="Submit Enquiry"
-                className="font-medium mt-9"
-              />
-            </form>
+            <Form />
           </div>
         </div>
       </main>
