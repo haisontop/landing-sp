@@ -7,13 +7,22 @@ import {
   faBath,
   faCar,
 } from "@fortawesome/free-solid-svg-icons";
-import { Card, Tag } from "@/components";
+import { Card, Carousel, Tag } from "@/components";
+import Image from "next/image";
+
+const item = [
+  "/image/listing/166993800256625328-rsd.png",
+  "https://placehold.it/800x600",
+  "https://placehold.it/1400x800",
+  "https://placehold.it/1200x900",
+];
 
 interface PropertyCardProps {
   id: number;
   type?: "feature" | "horizontal" | "vertical";
   size?: "regular" | "small";
   className?: string;
+  showCarousel?: boolean;
 }
 
 export const PropertyCard: React.FC<PropertyCardProps> = ({
@@ -21,6 +30,7 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({
   id,
   className,
   size = "regular",
+  showCarousel,
 }) => {
   const features = [
     {
@@ -43,17 +53,41 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({
 
   return (
     <Card className={className}>
-      <div className={`flex ${type === "vertical" ? "flex-col" : "flex-col lg:flex-row"}`}>
+      <div
+        className={`flex ${
+          type === "vertical" ? "flex-col" : "flex-col lg:flex-row"
+        }`}
+      >
         <div
-          style={{ backgroundImage: "url(https://placehold.it/800x600)" }}
+          style={{
+            backgroundImage: showCarousel
+              ? ""
+              : "url(https://placehold.it/800x600)",
+          }}
           className={`aspect-video bg-cover bg-center ${
             type === "vertical" ? "w-full" : "w-full lg:w-9/12"
           }`}
         >
-            <div className={`pl-10 pt-8 ${type === "vertical" ? "hidden" : "inline-block lg:hidden"} `}>
-              <Tag label="Auction - Sat 28th Feb" icon={faCalendarPlus} />
+          <div
+            className={`pl-10 pt-8 ${
+              type === "vertical" ? "hidden" : "inline-block lg:hidden"
+            } `}
+          >
+            <Tag label="Auction - Sat 28th Feb" icon={faCalendarPlus} />
+          </div>
+          {showCarousel && (
+            <div className="h-full">
+              <Carousel loop>
+                {item.map((src, i) => (
+                  <div className="relative h-full flex-[0_0_100%]" key={i}>
+                    <img src={src} alt="alt" className="object-cover h-full" />
+                  </div>
+                ))}
+              </Carousel>
             </div>
+          )}
         </div>
+
         <div
           className={`flex flex-col h-full justify-between text-sp-blue grow ${
             type !== "vertical" && "basis-2/3"
@@ -67,7 +101,9 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({
             )}
             <h4
               className={`${
-                size === "regular" ? "text-2xl md:text-3xl lg:text-4xl" : "text-2xl"
+                size === "regular"
+                  ? "text-2xl md:text-3xl lg:text-4xl"
+                  : "text-2xl"
               } font-bold`}
             >
               13/84 Beachly Ln, Newcastle

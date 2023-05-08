@@ -58,6 +58,7 @@ export default function Home({ secondaryLinks }: { secondaryLinks: any }) {
                   id={123456}
                   type="feature"
                   className="col-span-2 row-span-2"
+                  showCarousel
                 />
                 <Card className="col-span-2 flex flex-col">
                   <div className="p-8 grow justify-center flex flex-col">

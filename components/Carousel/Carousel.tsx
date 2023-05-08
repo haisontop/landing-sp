@@ -1,6 +1,7 @@
 // import the hook and options type
 import useEmblaCarousel, { EmblaOptionsType } from "embla-carousel-react";
-import React, { useCallback } from "react";
+import Autoplay from "embla-carousel-autoplay";
+import React, { useCallback, useRef } from "react";
 import { PropsWithChildren, useEffect, useState } from "react";
 import Dots from "./Dots";
 import { Nextbutton, Prevbutton } from "./NextPrevButton";
@@ -13,7 +14,13 @@ interface CarouselControlProps {
 type Props = PropsWithChildren & EmblaOptionsType & CarouselControlProps;
 
 export const Carousel = ({ children, showControls, ...options }: Props) => {
-  const [emblaRef, emblaApi] = useEmblaCarousel(options);
+  const autoplay = useRef(
+    Autoplay(
+      { delay: 3000, stopOnInteraction: false },
+    )
+  );
+
+  const [emblaRef, emblaApi] = useEmblaCarousel(options, [autoplay.current]);
 
   // need to selectedIndex to allow this component to re-render in react.
   // Since emblaRef is a ref, it won't re-render even if there are internal changes to its state.
@@ -43,9 +50,9 @@ export const Carousel = ({ children, showControls, ...options }: Props) => {
   );
 
   return (
-    <>
-      <div className="overflow-hidden relative rounded-3xl" ref={emblaRef}>
-        <div className="flex">{children}</div>
+    <div className="h-full relative">
+      <div className="overflow-hidden relative h-full" ref={emblaRef}>
+        <div className="flex h-full">{children}</div>
         {showControls && (
           <>
             <Nextbutton onclick={scrollNext} />
@@ -53,7 +60,9 @@ export const Carousel = ({ children, showControls, ...options }: Props) => {
           </>
         )}
       </div>
-      <Dots itemsLength={length} selectedIndex={selectedIndex} />
-    </>
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2">
+        <Dots itemsLength={length} selectedIndex={selectedIndex} />
+      </div>
+    </div>
   );
 };
